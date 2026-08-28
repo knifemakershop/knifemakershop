@@ -3,79 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KnifeMakerShop</title>
+<title>CK Nam | KnifeMakerShop</title>
+<meta name="description" content="CK Nam KnifeMakerShop — Handmade Custom Knives. งานมีดทำมือ ตีร้อนขึ้นรูปจากเหล็กแหนบ และเหล็ก SUP9 เริ่มสร้างสรรค์ผลงานตั้งแต่ปี 2018">
 
 <style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-    background:#1b1b1b;
-    color:white;
-    font-family:Arial,sans-serif;
-    text-align:center;
-    margin:0;
+  margin:0;
+  background:#050505;
+  color:#f4f0e8;
+  font-family:Arial,"Noto Sans Thai",sans-serif;
+  line-height:1.7;
 }
-header{
-    background:#111;
-    padding:20px;
+a{color:inherit;text-decoration:none}
+nav{
+  position:sticky;top:0;z-index:10;
+  background:rgba(5,5,5,.96);
+  border-bottom:1px solid #4b3912;
+  padding:14px 5%;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
 }
-img{
-    width:90%;
-    max-width:400px;
-    border-radius:10px;
-    margin-top:20px;
+.logo{font-size:24px;font-weight:700;color:#e5ad28;line-height:1.1}
+.logo small{display:block;color:#fff;font-size:13px;font-weight:400}
+.navlinks{display:flex;gap:22px;font-size:14px}
+.navlinks a:hover{color:#e5ad28}
+.hero{
+  min-height:540px;
+  display:flex;align-items:center;
+  padding:60px 7%;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.68) 45%,rgba(0,0,0,.25) 100%),
+    radial-gradient(circle at 75% 45%,#5d3b12 0,#17100a 30%,#050505 70%);
+  border-bottom:1px solid #4b3912;
 }
-.card{
-    padding:20px;
+.hero-content{max-width:650px}
+.kicker{color:#e5ad28;letter-spacing:2px;font-size:18px}
+h1{font-family:Georgia,serif;font-size:64px;line-height:1.05;margin:10px 0;color:#fff}
+.gold{color:#e5ad28}
+.hero p{font-size:18px;max-width:570px}
+.btn{
+  display:inline-block;margin:14px 10px 0 0;padding:12px 24px;
+  border:1px solid #d9a522;border-radius:6px;color:#fff;
 }
-.price{
-    color:#ffd700;
-    font-size:28px;
+.btn.primary{background:#d59c18;color:#111;font-weight:700}
+section{padding:55px 6%;border-bottom:1px solid #2b230f}
+.section-title{text-align:center;margin-bottom:30px}
+.section-title h2{font-family:Georgia,serif;font-size:34px;margin:0}
+.section-title p{color:#d9a522;margin:3px 0}
+.about{
+  display:grid;grid-template-columns:1fr 1.5fr 1fr;gap:28px;align-items:center;
 }
-button{
-    background:#c62828;
-    color:white;
-    border:none;
-    padding:15px 30px;
-    font-size:18px;
-    border-radius:8px;
+.about-image{
+  min-height:280px;border-radius:10px;
+  background:linear-gradient(135deg,#17120a,#6a4415,#111);
+  border:1px solid #594316;
+  display:flex;align-items:center;justify-content:center;
+  font-size:70px;
+}
+.about h3{font-family:Georgia,serif;font-size:31px;margin:0}
+.stats{border:1px solid #4d3a15;border-radius:10px;overflow:hidden}
+.stat{padding:18px;border-bottom:1px solid #2d2410}
+.stat:last-child{border:0}
+.stat strong{display:block;color:#e5ad28;font-size:18px}
+.materials{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.material{
+  border:1px solid #5b4518;border-radius:10px;padding:25px;
+  background:linear-gradient(145deg,#0d0d0d,#15120c);
+}
+.material h3{color:#e5ad28;margin-top:0}
+.material .en{font-weight:700}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.gallery img{
+  width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;
+  border:1px solid #5b4518;background:#111;
+}
+.gallery figcaption{text-align:center;color:#d9a522;font-size:13px;margin-top:6px}
+.contact{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.contact a,.contact div{
+  border:1px solid #5b4518;border-radius:9px;padding:18px 10px;
+  text-align:center;background:#0b0b0b;
+}
+.contact strong{display:block;color:#e5ad28;margin-bottom:4px}
+footer{text-align:center;padding:24px;color:#aaa;font-size:13px}
+@media(max-width:900px){
+  .about{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .contact{grid-template-columns:repeat(2,1fr)}
+  .navlinks{display:none}
+}
+@media(max-width:600px){
+  .hero{padding:50px 7%;min-height:500px}
+  h1{font-size:45px}
+  .materials,.contact{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr)}
 }
 </style>
-
 </head>
 
-<h2>ผลงานของเรา</h2>
+<body>
 
-<div class="gallery">
+<nav>
+  <div class="logo">CK Nam 🇹🇭🇦🇺🔪<small>KnifeMakerShop</small></div>
+  <div class="navlinks">
+    <a href="#home">หน้าหลัก</a>
+    <a href="#about">เกี่ยวกับเรา</a>
+    <a href="#materials">วัสดุและการผลิต</a>
+    <a href="#works">ผลงาน</a>
+    <a href="#contact">ติดต่อเรา</a>
+  </div>
+</nav>
 
-<img src="IMG_0185.jpeg" alt="ผลงานมีด 1">
-
-<img src="IMG_0335.jpeg" alt="ผลงานมีด 2">
-
-<img src="IMG_6573.jpeg" alt="ผลงานมีด 3">
-
-<img src="IMG_8522.jpeg" alt="ผลงานมีด 4">
-
-</div>
-
-<header>
-<h1>KnifeMakerShop</h1>
-<p>Handmade Custom Knives</p>
+<header class="hero" id="home">
+  <div class="hero-content">
+    <div class="kicker">HANDMADE CUSTOM KNIVES</div>
+    <h1>CK Nam <span class="gold">🇹🇭🇦🇺🔪</span></h1>
+    <h2 class="gold">KnifeMakerShop</h2>
+    <p>งานมีดทำมือ คุณภาพสูง สำหรับนักใช้งานตัวจริง<br>
+    Handmade knives for real use and real people.</p>
+    <a class="btn primary" href="#works">ชมผลงาน</a>
+    <a class="btn" href="#contact">ติดต่อช่าง</a>
+  </div>
 </header>
 
-<div class="card">
+<section id="about">
+  <div class="section-title">
+    <h2>เกี่ยวกับช่าง</h2>
+    <p>ABOUT THE MAKER</p>
+  </div>
+  <div class="about">
+    <div class="about-image">🔨🔥🔪</div>
+    <div>
+      <h3>CK Nam 🇹🇭🇦🇺🔪</h3>
+      <p><strong>ช่างทำมีด • Knife Maker</strong></p>
+      <p>เริ่มสร้างสรรค์ผลงานตั้งแต่ปี <span class="gold"><strong>2018</strong></span>
+      ด้วยความตั้งใจและความหลงใหลในงานช่าง ใส่ใจตั้งแต่การเลือกวัสดุ
+      การตีร้อนขึ้นรูป การอบชุบ ไปจนถึงการเก็บรายละเอียดขั้นสุดท้าย</p>
+      <p>Every knife is handmade with passion and precision.
+      From forging to finishing, every detail is crafted for strength,
+      sharpness and durability.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>2018</strong>เริ่มทำผลงาน</div>
+      <div class="stat"><strong>100% Handmade</strong>งานทำมือทุกชิ้น</div>
+      <div class="stat"><strong>Strong • Sharp • Durable</strong>แข็งแรง คม ทนทาน</div>
+      <div class="stat"><strong>Quality First</strong>ใส่ใจในคุณภาพ</div>
+    </div>
+  </div>
+</section>
 
-<img src="IMG_0335.jpeg" alt="Knife">
+<section id="materials">
+  <div class="section-title">
+    <h2>วัสดุและการผลิต</h2>
+    <p>MATERIALS &amp; CRAFTSMANSHIP</p>
+  </div>
+  <div class="materials">
+    <article class="material">
+      <h3>ตีร้อนขึ้นรูปจากเหล็กแหนบ 🔨🔥</h3>
+      <p class="en">Hot Forged from Leaf Spring Steel</p>
+      <p>เหล็กแหนบ (Leaf Spring) เป็นเหล็กที่มีความเหนียวและเหมาะกับงานที่ต้องการความแข็งแรง
+      ผ่านการตีร้อนขึ้นรูปเพื่อสร้างทรงใบมีด ทำให้โครงสร้างเหล็กแน่น แข็งแรง และทนทาน</p>
+      <p>Leaf spring steel is selected for its toughness and flexibility.
+      Hot forging and careful heat treatment help produce strong,
+      durable blades designed for demanding use.</p>
+    </article>
+    <article class="material">
+      <h3>วัสดุเหล็ก SUP9</h3>
+      <p class="en">SUP9 Spring Steel</p>
+      <p>SUP9 เป็นเหล็กสปริงคาร์บอนที่มีความเหนียวและความแข็งแรง
+      เหมาะสำหรับงานมีดที่ต้องการความทนทานและการใช้งานจริง</p>
+      <p>SUP9 is a spring steel known for toughness, strength and resilience.
+      It is suitable for handmade knives where durability and practical
+      cutting performance are important.</p>
+    </article>
+  </div>
+</section>
 
-<h2>Bushcraft Knife</h2>
+<section id="works">
+  <div class="section-title">
+    <h2>ผลงานของเรา</h2>
+    <p>OUR WORKS</p>
+  </div>
+  <div class="gallery">
+    <figure><img src="IMG_0185.jpeg" alt="CK Nam knife work 1"><figcaption>IMG_0185</figcaption></figure>
+    <figure><img src="IMG_0335.jpeg" alt="CK Nam knife work 2"><figcaption>IMG_0335</figcaption></figure>
+    <figure><img src="IMG_6573.jpeg" alt="CK Nam knife work 3"><figcaption>IMG_6573</figcaption></figure>
+    <figure><img src="IMG_8522.jpeg" alt="CK Nam knife work 4"><figcaption>IMG_8522</figcaption></figure>
+  </div>
+</section>
 
-<p>เหล็ก High Carbon Steel</p>
+<section id="contact">
+  <div class="section-title">
+    <h2>ช่องทางการติดต่อ</h2>
+    <p>CONTACT</p>
+  </div>
+  <div class="contact">
+    <a href="https://www.youtube.com/results?search_query=CK+Nam+Chanel" target="_blank" rel="noopener">
+      <strong>▶️ YouTube</strong>CK Nam Chanel
+    </a>
+    <a href="https://line.me/ti/p/~ck_nampersonal" target="_blank" rel="noopener">
+      <strong>💬 LINE</strong>ck_nampersonal
+    </a>
+    <a href="https://www.facebook.com/search/top?q=CK%20Nam" target="_blank" rel="noopener">
+      <strong>📘 Facebook</strong>CK Nam
+    </a>
+    <a href="https://www.instagram.com/knifemakershop1996/" target="_blank" rel="noopener">
+      <strong>📷 Instagram</strong>knifemakershop1996
+    </a>
+    <a href="tel:0959161778">
+      <strong>☎️ Mobile</strong>095-916-1778
+    </a>
+  </div>
+</section>
 
-<p>ด้ามสีดำ</p>
-
-<p class="price">฿1200</p>
-
-<button>ติดต่อสั่งซื้อ</button>
-
-</div>
+<footer>© 2026 CK Nam KnifeMakerShop. All Rights Reserved.</footer>
 
 </body>
 </html>
