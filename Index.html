@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CK NAM | KNIFEMAKERSHOP</title>
+<style>
+*,
+*::before,
+*::after{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:#080808;
+  color:#f2f2f2;
+  font-family:Arial,"Noto Sans Thai","Tahoma",sans-serif;
+  line-height:1.65;
+  overflow-x:hidden;
+}
+
+img{max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit}
+
+.wrap{
+  width:min(1120px,calc(100% - 32px));
+  margin-inline:auto;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(8,8,8,.96);
+  border-bottom:1px solid #5a4715;
+  backdrop-filter:blur(10px);
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:12px 0;
+  flex-wrap:wrap;
+}
+
+.nav a{
+  display:block;
+  max-width:100%;
+  padding:7px 11px;
+  border:1px solid #3e3418;
+  border-radius:8px;
+  font-size:13px;
+  line-height:1.35;
+  text-align:center;
+  overflow-wrap:anywhere;
+}
+
+.nav a:hover{
+  border-color:#d4af37;
+  color:#d4af37;
+}
+
+.hero{
+  min-height:560px;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:72px 0;
+  background:radial-gradient(circle at 50% 20%,#302507 0,#111 35%,#080808 72%);
+}
+
+.logo{
+  font-size:17px;
+  letter-spacing:4px;
+  color:#d4af37;
+  overflow-wrap:anywhere;
+}
+
+.hero h1{
+  font-size:clamp(36px,7vw,70px);
+  line-height:1.05;
+  margin:12px 0 8px;
+  color:#fff;
+  letter-spacing:2px;
+  overflow-wrap:anywhere;
+}
+
+.hero h2{
+  font-size:clamp(20px,3vw,28px);
+  line-height:1.25;
+  color:#d4af37;
+  letter-spacing:2px;
+  margin:0 0 18px;
+  overflow-wrap:anywhere;
+}
+
+.hero p{
+  max-width:720px;
+  margin:9px auto;
+  color:#ddd;
+  overflow-wrap:anywhere;
+}
+
+.btn{
+  display:inline-block;
+  max-width:100%;
+  background:#d4af37;
+  color:#080808;
+  font-weight:700;
+  padding:11px 19px;
+  border-radius:8px;
+  margin:10px 4px;
+  text-align:center;
+  overflow-wrap:anywhere;
+}
+
+.btn.dark{
+  background:#171717;
+  color:#d4af37;
+  border:1px solid #d4af37;
+}
+
+section{
+  padding:54px 0;
+  border-bottom:1px solid #29230f;
+}
+
+h2.section-title{
+  text-align:center;
+  color:#d4af37;
+  margin:0 0 8px;
+  font-size:clamp(24px,4vw,32px);
+  line-height:1.25;
+  overflow-wrap:anywhere;
+}
+
+.sub{
+  text-align:center;
+  color:#bbb;
+  max-width:900px;
+  margin:0 auto 28px;
+  overflow-wrap:anywhere;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
+}
+
+.panel{
+  min-width:0;
+  background:#141414;
+  border:1px solid #4c3d14;
+  border-radius:14px;
+  padding:22px;
+  overflow:hidden;
+}
+
+.panel h3{
+  color:#d4af37;
+  margin:0 0 10px;
+  font-size:clamp(19px,2.5vw,24px);
+  line-height:1.35;
+  overflow-wrap:anywhere;
+}
+
+.panel p,
+.panel li{
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+
+.material img{
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:10px;
+  border:1px solid #554515;
+  background:#0a0a0a;
+  margin-bottom:16px;
+}
+
+.material ul{
+  margin:0;
+  padding-left:22px;
+  color:#ddd;
+}
+
+.notice{
+  text-align:center;
+  border:1px solid #d4af37;
+  border-radius:12px;
+  padding:14px 16px;
+  margin:20px 0;
+  color:#fff;
+  overflow-wrap:anywhere;
+}
+
+.price{
+  color:#d4af37;
+  font-weight:700;
+  overflow-wrap:anywhere;
+}
+
+.works-tools{
+  text-align:center;
+  margin-bottom:24px;
+}
+
+.size-btn{
+  background:#171717;
+  color:#eee;
+  border:1px solid #4c3d14;
+  padding:8px 14px;
+  border-radius:7px;
+  margin:3px;
+  cursor:pointer;
+}
+
+.size-btn.active,
+.size-btn:hover{
+  border-color:#d4af37;
+  color:#d4af37;
+}
+
+.work-group-title{
+  color:#d4af37;
+  margin:30px 0 14px;
+  font-size:clamp(19px,2.8vw,25px);
+  line-height:1.4;
+  overflow-wrap:anywhere;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+
+.product{
+  min-width:0;
+  background:#141414;
+  border:1px solid #4c3d14;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.product img{
+  width:100%;
+  height:145px;
+  object-fit:cover;
+  display:block;
+  cursor:zoom-in;
+  background:#222;
+  transition:transform .2s ease;
+}
+
+.product img:hover{transform:scale(1.015)}
+
+.products.small .product img{height:105px}
+.products.medium .product img{height:145px}
+.products.large .product img{height:210px}
+
+.product .body{
+  padding:15px;
+  min-width:0;
+}
+
+.product h4{
+  margin:0 0 6px;
+  color:#fff;
+  font-size:17px;
+  line-height:1.4;
+  overflow-wrap:anywhere;
+}
+
+.product p{
+  margin:5px 0;
+  color:#bbb;
+  font-size:14px;
+  overflow-wrap:anywhere;
+}
+
+.order{
+  display:inline-block;
+  max-width:100%;
+  margin-top:10px;
+  border:1px solid #d4af37;
+  color:#d4af37;
+  padding:8px 13px;
+  border-radius:7px;
+  text-align:center;
+  overflow-wrap:anywhere;
+}
+
+.payment{
+  max-width:650px;
+  margin:auto;
+  text-align:center;
+}
+
+.bank{
+  font-size:24px;
+  color:#d4af37;
+  font-weight:700;
+  overflow-wrap:anywhere;
+}
+
+.account{
+  font-size:22px;
+  overflow-wrap:anywhere;
+}
+
+.order-panel{
+  max-width:700px;
+  margin:auto;
+}
+
+#item{
+  width:100%;
+  min-width:0;
+  padding:12px;
+  background:#0b0b0b;
+  color:#fff;
+  border:1px solid #4c3d14;
+  border-radius:7px;
+  outline:none;
+}
+
+#item:focus{
+  border-color:#d4af37;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+
+.contact{
+  min-width:0;
+  border:1px solid #4c3d14;
+  border-radius:10px;
+  padding:15px;
+  background:#141414;
+  overflow:hidden;
+}
+
+.contact strong{
+  color:#d4af37;
+  display:block;
+  margin-bottom:3px;
+}
+
+.contact a,
+.contact span{
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+
+footer{
+  text-align:center;
+  padding:35px 16px;
+  color:#aaa;
+  overflow-wrap:anywhere;
+}
+
+@media(max-width:850px){
+  .grid{grid-template-columns:1fr}
+  .products{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media(max-width:600px){
+  .wrap{width:min(100% - 22px,1120px)}
+  .nav{justify-content:stretch}
+  .nav a{flex:1 1 auto;font-size:12px;padding:7px 8px}
+  .hero{min-height:500px;padding:58px 0}
+  .hero h1{font-size:clamp(34px,10vw,48px)}
+  section{padding:44px 0}
+  .panel{padding:18px}
+  .products{grid-template-columns:1fr}
+  .products.small .product img{height:120px}
+  .products.medium .product img{height:160px}
+  .products.large .product img{height:220px}
+  .contact-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:390px){
+  .nav a{font-size:11px;padding:6px 6px}
+  .logo{font-size:14px;letter-spacing:2px}
+  .btn{width:100%;margin:7px 0}
+}
+
+
+.contact-modern{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  max-width:980px;
+  margin:0 auto;
+}
+
+.contact-card{
+  min-width:0;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:16px 17px;
+  background:linear-gradient(145deg,#171717,#0e0e0e);
+  border:1px solid #4c3d14;
+  border-radius:14px;
+  color:#eee;
+  transition:transform .18s ease,border-color .18s ease,background .18s ease;
+  overflow:hidden;
+}
+
+a.contact-card:hover{
+  transform:translateY(-2px);
+  border-color:#d4af37;
+  background:#18150b;
+}
+
+.contact-icon{
+  flex:0 0 48px;
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  border:1px solid #6a551b;
+  background:#090909;
+  color:#d4af37;
+  font-weight:700;
+  font-size:25px;
+  line-height:1;
+}
+
+.phone-icon{font-size:24px}
+.email-icon{font-size:23px}
+.instagram-icon{font-size:31px}
+.facebook-icon{font-family:Arial;font-size:31px}
+.youtube-icon{font-size:20px}
+.site-icon{font-size:27px}
+
+.contact-copy{
+  min-width:0;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+
+.contact-copy strong{
+  color:#d4af37;
+  font-size:13px;
+  letter-spacing:.3px;
+  line-height:1.35;
+}
+
+.contact-copy span{
+  color:#eee;
+  font-size:15px;
+  line-height:1.45;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+
+.contact-arrow{
+  flex:0 0 auto;
+  color:#d4af37;
+  font-size:26px;
+  line-height:1;
+}
+
+@media(max-width:650px){
+  .contact-modern{grid-template-columns:1fr}
+  .contact-card{padding:14px}
+  .contact-icon{flex-basis:44px;width:44px;height:44px}
+  .contact-copy span{font-size:14px}
+}
+
+@media(max-width:390px){
+  .contact-card{gap:11px}
+  .contact-icon{flex-basis:40px;width:40px;height:40px}
+  .contact-copy strong{font-size:12px}
+  .contact-copy span{font-size:13px}
+}
+
+</style>
+</head>
+<body>
+<!--
+  KNIFEMAKERSHOP IMAGE MAP
+  MATERIALS:
+    Leaf Spring illustration: assets/leaf-spring-steel.svg
+    SUP9 illustration: assets/sup9-steel.svg
+  USER KNIFE WORKS:
+    assets/IMG_6573.jpeg
+    assets/IMG_8502.jpeg
+    assets/IMG_8522.jpeg
+    assets/IMG_0292.jpeg
+    assets/IMG_0185.jpeg
+    assets/att.11vBzaH3PF0DVsUvrecRhNDqp1_WCdGiljPIBULXHa8/IMG_8827.jpeg
+    assets/IMG_8826.png
+-->
+
+<header><div class="wrap"><nav class="nav">
+<a href="#home">หน้าหลัก / Home</a><a href="#about">เกี่ยวกับเรา / About</a><a href="#materials">วัสดุ / Materials</a><a href="#works">ผลงาน / Works</a><a href="#prices">ราคา / Prices</a><a href="#order">สั่งซื้อ / Order</a><a href="#payment">ชำระเงิน / Payment</a><a href="#contact">ติดต่อ / Contact</a>
+</nav></div></header>
+
+<main id="home">
+<section class="hero"><div class="wrap"><div class="logo">⚒ CK NAM • KNIFEMAKERSHOP 🇹🇭</div><h1>HANDMADE KNIVES</h1><h2>MADE WITH PASSION</h2><p>มีดทำมือ ตีร้อนขึ้นรูปด้วยความตั้งใจ</p><p>Handmade knives, hot forged with care and craftsmanship.</p><a class="btn" href="#works">ดูผลงาน / VIEW WORKS</a><a class="btn dark" href="#order">สั่งซื้อ / ORDER</a></div></section>
+
+<section id="about"><div class="wrap"><h2 class="section-title">เกี่ยวกับเรา / ABOUT</h2><p class="sub">เริ่มทำมีดตั้งแต่ปี 2018 จากแรงบันดาลใจจากมีดพื้นบ้านโบราณ รักษางานช่างแบบดั้งเดิมและพัฒนารูปแบบมีดทำมือให้สวยงาม</p><p class="sub">Making knives since 2018, inspired by traditional folk knives, preserving traditional craftsmanship while developing beautiful handmade knife designs.</p>
+<div class="grid"><article class="panel"><h3>ตีร้อนขึ้นรูป / Hot Forging</h3><p>ขึ้นรูปแต่ละชิ้นด้วยการตีร้อน เพื่อความแข็งแรงและทนทาน.</p><p>Each piece is hot forged to achieve strength and durability.</p></article><article class="panel"><h3>อบชุบตามกระบวนการ / Heat Treatment</h3><p>อบชุบเหล็กตามกระบวนการ เพื่อเสริมความแข็งแรงและทนทาน.</p><p>The steel is heat treated according to the proper process to enhance strength and durability.</p></article></div></div></section>
+
+<section id="materials"><div class="wrap"><h2 class="section-title">วัสดุ / MATERIALS</h2><p class="sub">ส่วนนี้ใช้ภาพประกอบของวัสดุโดยเฉพาะ — ไม่ใช้รูปผลงานมีดของคุณ</p>
+<div class="grid">
+<article class="panel material"><img src="assets/leaf-spring-steel.svg" alt="Leaf Spring Steel / เหล็กแหนบ"><h3>เหล็กแหนบ / LEAF SPRING STEEL</h3><ul><li>มีความแข็งแรง / Strong</li><li>มีความยืดหยุ่น / Flexible</li><li>มีความเหนียว / Tough</li><li>เหมาะสำหรับงานมีดที่ต้องการความทนทาน / Suitable for knives requiring durability</li></ul></article>
+<article class="panel material"><img src="assets/sup9-steel.svg" alt="SUP9 Steel / เหล็ก SUP9"><h3>SUP9 / SUP9 STEEL</h3><ul><li>มีความแข็งแรงสูง / High strength</li><li>มีความแข็งและทนทาน / Hard and durable</li><li>ทนต่อการสึกหรอ / Wear resistant</li><li>เหมาะสำหรับงานมีดที่ต้องการความทนทาน / Suitable for knives requiring durability</li></ul></article>
+</div></div></section>
+
+<section id="works"><div class="wrap"><h2 class="section-title">ผลงานมีด / KNIFE WORKS</h2><p class="sub">รูปด้านล่างเป็นพื้นที่สำหรับรูปผลงานของคุณโดยเฉพาะ ไม่ใช้แทนภาพวัสดุ</p>
+<div class="works-tools"><button class="size-btn" data-size="small">เล็ก / Small</button><button class="size-btn active" data-size="medium">ปานกลาง / Medium</button><button class="size-btn" data-size="large">ใหญ่ / Large</button></div>
+<h3 class="work-group-title">มีดขนาดเล็ก / SMALL KNIFE — 3–5 inches — 690–990 THB</h3>
+<div class="products medium" id="smallProducts">
+<article class="product"><img src="assets/IMG_6573.jpeg" alt="Knife work 1"><div class="body"><h4>ผลงานมีด / Knife Work</h4><p>ใบมีด 3–5 นิ้ว / 3–5 inch blade</p><p class="price">690–990 THB</p><p>ด้ามมีด: ไม้พะยูง / Knife Handle: Siamese Rosewood</p><a class="order" href="#order" data-item="Knife Work 1">สั่งซื้อ / ORDER</a></div></article>
+<article class="product"><img src="assets/IMG_8502.jpeg" alt="Knife work 2"><div class="body"><h4>ผลงานมีด / Knife Work</h4><p>ใบมีด 3–5 นิ้ว / 3–5 inch blade</p><p class="price">690–990 THB</p><p>ด้ามมีด: ไม้พะยูง / Knife Handle: Siamese Rosewood</p><a class="order" href="#order" data-item="Knife Work 2">สั่งซื้อ / ORDER</a></div></article>
+<article class="product"><img src="assets/IMG_8522.jpeg" alt="Knife work 3"><div class="body"><h4>ผลงานมีด / Knife Work</h4><p>ใบมีด 3–5 นิ้ว / 3–5 inch blade</p><p class="price">690–990 THB</p><p>ด้ามมีด: ไม้พะยูง / Knife Handle: Siamese Rosewood</p><a class="order" href="#order" data-item="Knife Work 3">สั่งซื้อ / ORDER</a></div></article>
+<article class="product"><img src="assets/IMG_0292.jpeg" alt="Knife work 4"><div class="body"><h4>ผลงานมีด / Knife Work</h4><p>ใบมีด 3–5 นิ้ว / 3–5 inch blade</p><p class="price">690–990 THB</p><p>ด้ามมีด: ไม้พะยูง / Knife Handle: Siamese Rosewood</p><a class="order" href="#order" data-item="Knife Work 4">สั่งซื้อ / ORDER</a></div></article>
+</div>
+<h3 class="work-group-title">มีดขนาดกลาง / MEDIUM KNIFE — 6–10 inches — 1,400–1,600 THB</h3>
+<div class="products medium">
+<article class="product"><img src="assets/IMG_0185.jpeg" alt="Knife work 5"><div class="body"><h4>ผลงานมีด / Knife Work</h4><p>ใบมีด 6–10 นิ้ว / 6–10 inch blade</p><p class="price">1,400–1,600 THB</p><p>ด้ามมีด: ไม้พะยูง / Knife Handle: Siamese Rosewood</p><a class="order" href="#order" data-item="Knife Work 5">สั่งซื้อ / ORDER</a></div></article>
+<article class="product"><img src="assets/att.11vBzaH3PF0DVsUvrecRhNDqp1_WCdGiljPIBULXHa8/IMG_8827.jpeg" alt="Knife work 6"><div class="body"><h4>ผลงานมีด / Knife Work</h4><p>ใบมีด 6–10 นิ้ว / 6–10 inch blade</p><p class="price">1,400–1,600 THB</p><p>ด้ามมีด: ไม้พะยูง / Knife Handle: Siamese Rosewood</p><a class="order" href="#order" data-item="Knife Work 6">สั่งซื้อ / ORDER</a></div></article>
+<article class="product"><img src="assets/IMG_8826.png" alt="Knife work 7"><div class="body"><h4>ผลงานมีด / Knife Work</h4><p>ใบมีด 6–10 นิ้ว / 6–10 inch blade</p><p class="price">1,400–1,600 THB</p><p>ด้ามมีด: ไม้พะยูง / Knife Handle: Siamese Rosewood</p><a class="order" href="#order" data-item="Knife Work 7">สั่งซื้อ / ORDER</a></div></article>
+</div><div class="notice">ค่าจัดส่ง / Shipping: <span class="price">+100 THB</span></div></div></section>
+
+<section id="prices"><div class="wrap"><h2 class="section-title">ราคา / PRICES</h2><div class="grid"><div class="panel"><h3>มีดขนาดเล็ก / Small Knife</h3><p>3–5 นิ้ว / 3–5 inches</p><p class="price">690–990 THB</p></div><div class="panel"><h3>มีดขนาดกลาง / Medium Knife</h3><p>6–10 นิ้ว / 6–10 inches</p><p class="price">1,400–1,600 THB</p></div></div><div class="notice">ค่าจัดส่ง / Shipping: <span class="price">+100 THB</span></div></div></section>
+
+<section id="order"><div class="wrap"><h2 class="section-title">สั่งซื้อ / ORDER</h2><div class="panel order-panel"><p>รายการสั่งซื้อ / Order item</p><input id="item" style="width:100%;padding:12px;background:#0b0b0b;color:#fff;border:1px solid #4c3d14;border-radius:7px" placeholder="เลือกรายการจากปุ่ม ORDER ด้านบน"><p style="margin-top:15px"><a class="btn" id="emailOrder" href="mailto:knifemakershop@hotmail.com?subject=KnifeMakerShop%20Order">ส่งคำสั่งซื้อทางอีเมล / SEND ORDER</a></p></div></div></section>
+
+<section id="payment"><div class="wrap"><h2 class="section-title">ชำระเงิน / PAYMENT</h2><div class="panel payment"><div class="bank">KASIKORNBANK</div><p>ชื่อบัญชี / Account Name</p><div class="account">กานติมา / Kantima</div><div class="notice">⚠️ ชำระเงิน / โอนเงินเข้าบัญชีนี้เท่านั้น<br>บัญชีเดียวเท่านั้น<br>ONLY ONE ACCOUNT.</div></div></div></section>
+
+
+<section id="contact">
+  <div class="wrap">
+    <h2 class="section-title">ติดต่อเรา / CONTACT US</h2>
+    <p class="sub">เลือกช่องทางที่สะดวกสำหรับติดต่อ KnifeMakerShop</p>
+
+    <div class="contact-grid contact-modern">
+
+      <a class="contact-card" href="tel:0959161778">
+        <span class="contact-icon phone-icon" aria-hidden="true">☎</span>
+        <span class="contact-copy">
+          <strong>โทรศัพท์ / PHONE</strong>
+          <span>095-916-1778</span>
+        </span>
+        <span class="contact-arrow">›</span>
+      </a>
+
+      <a class="contact-card" href="mailto:knifemakershop@hotmail.com">
+        <span class="contact-icon email-icon" aria-hidden="true">✉</span>
+        <span class="contact-copy">
+          <strong>อีเมล / EMAIL</strong>
+          <span>knifemakershop@hotmail.com</span>
+        </span>
+        <span class="contact-arrow">›</span>
+      </a>
+
+      <a class="contact-card" href="https://www.instagram.com/knifemakershop1996/" target="_blank" rel="noopener">
+        <span class="contact-icon instagram-icon" aria-hidden="true">◎</span>
+        <span class="contact-copy">
+          <strong>Instagram</strong>
+          <span>@knifemakershop1996</span>
+        </span>
+        <span class="contact-arrow">›</span>
+      </a>
+
+      <a class="contact-card" href="https://www.facebook.com/" target="_blank" rel="noopener">
+        <span class="contact-icon facebook-icon" aria-hidden="true">f</span>
+        <span class="contact-copy">
+          <strong>Facebook</strong>
+          <span>CK Nam</span>
+        </span>
+        <span class="contact-arrow">›</span>
+      </a>
+
+      <a class="contact-card" href="https://www.facebook.com/" target="_blank" rel="noopener">
+        <span class="contact-icon facebook-icon" aria-hidden="true">f</span>
+        <span class="contact-copy">
+          <strong>Facebook Page</strong>
+          <span>CK Nam Shop personal</span>
+        </span>
+        <span class="contact-arrow">›</span>
+      </a>
+
+      <a class="contact-card" href="https://www.youtube.com/" target="_blank" rel="noopener">
+        <span class="contact-icon youtube-icon" aria-hidden="true">▶</span>
+        <span class="contact-copy">
+          <strong>YouTube</strong>
+          <span>CK Nam Chanel</span>
+        </span>
+        <span class="contact-arrow">›</span>
+      </a>
+
+      <div class="contact-card contact-site">
+        <span class="contact-icon site-icon" aria-hidden="true">⌂</span>
+        <span class="contact-copy">
+          <strong>เว็บไซต์ / WEBSITE</strong>
+          <span>https://knifemakershop.github.io/knifemakershop/</span>
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main><footer>CK NAM • KNIFEMAKERSHOP<br>HANDMADE KNIVES</footer>
+<script>
+document.querySelectorAll('.size-btn').forEach(b=>b.onclick=()=>{document.querySelectorAll('.products').forEach(p=>{p.classList.remove('small','medium','large');p.classList.add(b.dataset.size)});document.querySelectorAll('.size-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active')});
+document.querySelectorAll('.order').forEach(b=>b.onclick=()=>{document.getElementById('item').value=b.dataset.item});
+</script>
+</body></html>
