@@ -3,2708 +3,627 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>CK NAM | KNIFEMAKERSHOP</title>
-
-<meta name="description"
-content="KnifeMakerShop by CK Nam — Handmade traditional knives, hot forged from leaf spring steel and SUP9 steel.">
-
 <style>
-*{
-  box-sizing:border-box;
-}
+*,
+*::before,
+*::after{box-sizing:border-box}
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
-  margin:0;
-  background:#1b1b1b;
-  color:#fff;
-  font-family:Arial,sans-serif;
-  line-height:1.6;
+  margin:0;
+  background:#080808;
+  color:#f2f2f2;
+  font-family:Arial,"Noto Sans Thai","Tahoma",sans-serif;
+  line-height:1.65;
+  overflow-x:hidden;
 }
 
-a{
-  color:#ffd700;
-  text-decoration:none;
-}
+img{max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit}
 
-a:hover{
-  text-decoration:underline;
+.wrap{
+  width:min(1120px,calc(100% - 32px));
+  margin-inline:auto;
 }
 
 header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#111;
-  border-bottom:1px solid #333;
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(8,8,8,.96);
+  border-bottom:1px solid #5a4715;
+  backdrop-filter:blur(10px);
 }
 
 .nav{
-  max-width:1200px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:14px 18px;
-  gap:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:12px 0;
+  flex-wrap:wrap;
 }
 
-.logo{
-  font-weight:bold;
-  color:#ffd700;
-  font-size:20px;
-  white-space:nowrap;
+.nav a{
+  display:block;
+  max-width:100%;
+  padding:7px 11px;
+  border:1px solid #3e3418;
+  border-radius:8px;
+  font-size:13px;
+  line-height:1.35;
+  text-align:center;
+  overflow-wrap:anywhere;
 }
 
-nav{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  justify-content:flex-end;
-}
-
-nav a{
-  color:#fff;
-  padding:7px 10px;
-  border-radius:6px;
-}
-
-nav a:hover{
-  background:#333;
-  text-decoration:none;
-}
-
-.container{
-  width:min(1200px,94%);
-  margin:auto;
-}
-
-section{
-  padding:65px 0;
-  scroll-margin-top:80px;
+.nav a:hover{
+  border-color:#d4af37;
+  color:#d4af37;
 }
 
 .hero{
-  min-height:75vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  background:
-    radial-gradient(circle at center,#343434 0%,#1b1b1b 65%);
+  min-height:560px;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:72px 0;
+  background:radial-gradient(circle at 50% 20%,#302507 0,#111 35%,#080808 72%);
+}
+
+.logo{
+  font-size:17px;
+  letter-spacing:4px;
+  color:#d4af37;
+  overflow-wrap:anywhere;
 }
 
 .hero h1{
-  font-size:clamp(38px,7vw,76px);
-  margin:0;
-  color:#ffd700;
-  letter-spacing:2px;
+  font-size:clamp(36px,7vw,70px);
+  line-height:1.05;
+  margin:12px 0 8px;
+  color:#fff;
+  letter-spacing:2px;
+  overflow-wrap:anywhere;
 }
 
 .hero h2{
-  font-size:clamp(20px,4vw,34px);
-  margin:8px 0 20px;
+  font-size:clamp(20px,3vw,28px);
+  line-height:1.25;
+  color:#d4af37;
+  letter-spacing:2px;
+  margin:0 0 18px;
+  overflow-wrap:anywhere;
 }
 
 .hero p{
-  max-width:800px;
-  margin:10px auto;
-  color:#ddd;
+  max-width:720px;
+  margin:9px auto;
+  color:#ddd;
+  overflow-wrap:anywhere;
 }
 
 .btn{
-  display:inline-block;
-  border:0;
-  border-radius:8px;
-  background:#c62828;
-  color:#fff;
-  padding:13px 20px;
-  margin:5px;
-  cursor:pointer;
-  font-weight:bold;
-  font-size:15px;
-  text-decoration:none;
+  display:inline-block;
+  max-width:100%;
+  background:#d4af37;
+  color:#080808;
+  font-weight:700;
+  padding:11px 19px;
+  border-radius:8px;
+  margin:10px 4px;
+  text-align:center;
+  overflow-wrap:anywhere;
 }
 
-.btn:hover{
-  background:#e53935;
-  text-decoration:none;
+.btn.dark{
+  background:#171717;
+  color:#d4af37;
+  border:1px solid #d4af37;
 }
 
-.btn.secondary{
-  background:#555;
-}
-
-.btn.green{
-  background:#187a35;
-}
-
-.btn.gold{
-  background:#8a6d00;
-}
-
-.btn:disabled{
-  opacity:.5;
-  cursor:not-allowed;
+section{
+  padding:54px 0;
+  border-bottom:1px solid #29230f;
 }
 
 h2.section-title{
-  text-align:center;
-  color:#ffd700;
-  margin-bottom:35px;
-  font-size:32px;
+  text-align:center;
+  color:#d4af37;
+  margin:0 0 8px;
+  font-size:clamp(24px,4vw,32px);
+  line-height:1.25;
+  overflow-wrap:anywhere;
 }
 
-.card{
-  background:#242424;
-  border:1px solid #3c3c3c;
-  border-radius:12px;
-  padding:22px;
-  margin-bottom:20px;
+.sub{
+  text-align:center;
+  color:#bbb;
+  max-width:900px;
+  margin:0 auto 28px;
+  overflow-wrap:anywhere;
 }
 
-.about-text{
-  max-width:900px;
-  margin:auto;
-  text-align:center;
-  color:#ddd;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
 }
 
-/* MATERIALS */
-
-.materials{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
+.panel{
+  min-width:0;
+  background:#141414;
+  border:1px solid #4c3d14;
+  border-radius:14px;
+  padding:22px;
+  overflow:hidden;
 }
 
-.material{
-  background:#242424;
-  border:1px solid #444;
-  border-radius:12px;
-  padding:20px;
-  text-align:center;
+.panel h3{
+  color:#d4af37;
+  margin:0 0 10px;
+  font-size:clamp(19px,2.5vw,24px);
+  line-height:1.35;
+  overflow-wrap:anywhere;
+}
+
+.panel p,
+.panel li{
+  overflow-wrap:anywhere;
+  word-break:normal;
 }
 
 .material img{
-  width:100%;
-  max-width:360px;
-  height:230px;
-  object-fit:contain;
-  background:#111;
-  border-radius:10px;
-  padding:12px;
-  cursor:zoom-in;
-  display:block;
-  margin:0 auto 18px;
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:10px;
+  border:1px solid #554515;
+  background:#0a0a0a;
+  margin-bottom:16px;
 }
 
-.material h3{
-  color:#ffd700;
+.material ul{
+  margin:0;
+  padding-left:22px;
+  color:#ddd;
 }
 
-/* WORKS */
-
-.filter-buttons{
-  text-align:center;
-  margin-bottom:30px;
-}
-
-.products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-  gap:25px;
-}
-
-.product{
-  background:#242424;
-  border:1px solid #444;
-  border-radius:12px;
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-}
-
-.product-image{
-  width:100%;
-  height:300px;
-  object-fit:contain;
-  background:#111;
-  cursor:zoom-in;
-  display:block;
-}
-
-.product-content{
-  padding:18px;
-  display:flex;
-  flex-direction:column;
-  flex:1;
-}
-
-.product h3{
-  color:#ffd700;
-  margin-top:0;
-}
-
-.product p{
-  color:#ddd;
+.notice{
+  text-align:center;
+  border:1px solid #d4af37;
+  border-radius:12px;
+  padding:14px 16px;
+  margin:20px 0;
+  color:#fff;
+  overflow-wrap:anywhere;
 }
 
 .price{
-  color:#ffd700;
-  font-size:20px;
-  font-weight:bold;
-  margin:8px 0;
+  color:#d4af37;
+  font-weight:700;
+  overflow-wrap:anywhere;
 }
 
-.product .order{
-  margin-top:auto;
+.works-tools{
+  text-align:center;
+  margin-bottom:24px;
 }
 
-.category-title{
-  color:#ffd700;
-  text-align:center;
-  margin:35px 0 20px;
+.size-btn{
+  background:#171717;
+  color:#eee;
+  border:1px solid #4c3d14;
+  padding:8px 14px;
+  border-radius:7px;
+  margin:3px;
+  cursor:pointer;
 }
 
-.empty-category{
-  text-align:center;
-  color:#aaa;
-  padding:30px;
-  border:1px dashed #555;
-  border-radius:10px;
+.size-btn.active,
+.size-btn:hover{
+  border-color:#d4af37;
+  color:#d4af37;
 }
 
-/* PRICES */
-
-.price-table{
-  width:100%;
-  border-collapse:collapse;
-  background:#242424;
-  border-radius:10px;
-  overflow:hidden;
+.work-group-title{
+  color:#d4af37;
+  margin:30px 0 14px;
+  font-size:clamp(19px,2.8vw,25px);
+  line-height:1.4;
+  overflow-wrap:anywhere;
 }
 
-.price-table th,
-.price-table td{
-  padding:15px;
-  border:1px solid #444;
-  text-align:left;
+.products{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
 }
 
-.price-table th{
-  background:#111;
-  color:#ffd700;
+.product{
+  min-width:0;
+  background:#141414;
+  border:1px solid #4c3d14;
+  border-radius:12px;
+  overflow:hidden;
 }
 
-.note{
-  color:#ccc;
-  margin-top:15px;
+.product img{
+  width:100%;
+  height:145px;
+  object-fit:cover;
+  display:block;
+  cursor:zoom-in;
+  background:#222;
+  transition:transform .2s ease;
 }
 
-/* ORDER */
+.product img:hover{transform:scale(1.015)}
 
-.order-layout{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:25px;
+.products.small .product img{height:105px}
+.products.medium .product img{height:145px}
+.products.large .product img{height:210px}
+
+.product .body{
+  padding:15px;
+  min-width:0;
+}
+
+.product h4{
+  margin:0 0 6px;
+  color:#fff;
+  font-size:17px;
+  line-height:1.4;
+  overflow-wrap:anywhere;
+}
+
+.product p{
+  margin:5px 0;
+  color:#bbb;
+  font-size:14px;
+  overflow-wrap:anywhere;
+}
+
+.order{
+  display:inline-block;
+  max-width:100%;
+  margin-top:10px;
+  border:1px solid #d4af37;
+  color:#d4af37;
+  padding:8px 13px;
+  border-radius:7px;
+  text-align:center;
+  overflow-wrap:anywhere;
+}
+
+.payment{
+  max-width:650px;
+  margin:auto;
+  text-align:center;
+}
+
+.bank{
+  font-size:24px;
+  color:#d4af37;
+  font-weight:700;
+  overflow-wrap:anywhere;
+}
+
+.account{
+  font-size:22px;
+  overflow-wrap:anywhere;
+}
+
+.order-panel{
+  max-width:700px;
+  margin:auto;
+}
+
+#item{
+  width:100%;
+  min-width:0;
+  padding:12px;
+  background:#0b0b0b;
+  color:#fff;
+  border:1px solid #4c3d14;
+  border-radius:7px;
+  outline:none;
+}
+
+#item:focus{
+  border-color:#d4af37;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+
+.contact{
+  min-width:0;
+  border:1px solid #4c3d14;
+  border-radius:10px;
+  padding:15px;
+  background:#141414;
+  overflow:hidden;
+}
+
+.contact strong{
+  color:#d4af37;
+  display:block;
+  margin-bottom:3px;
+}
+
+.contact a,
+.contact span{
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+
+footer{
+  text-align:center;
+  padding:35px 16px;
+  color:#aaa;
+  overflow-wrap:anywhere;
 }
 
 @media(max-width:850px){
-  .order-layout{
-    grid-template-columns:1fr;
-  }
-
-  .nav{
-    flex-direction:column;
-  }
-
-  nav{
-    justify-content:center;
-  }
+  .grid{grid-template-columns:1fr}
+  .products{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 
-label{
-  display:block;
-  margin-top:13px;
-  margin-bottom:6px;
-  font-weight:bold;
+@media(max-width:600px){
+  .wrap{width:min(100% - 22px,1120px)}
+  .nav{justify-content:stretch}
+  .nav a{flex:1 1 auto;font-size:12px;padding:7px 8px}
+  .hero{min-height:500px;padding:58px 0}
+  .hero h1{font-size:clamp(34px,10vw,48px)}
+  section{padding:44px 0}
+  .panel{padding:18px}
+  .products{grid-template-columns:1fr}
+  .products.small .product img{height:120px}
+  .products.medium .product img{height:160px}
+  .products.large .product img{height:220px}
+  .contact-grid{grid-template-columns:1fr}
 }
 
-input,
-select,
-textarea{
-  width:100%;
-  padding:12px;
-  border-radius:7px;
-  border:1px solid #555;
-  background:#111;
-  color:#fff;
-  font-size:16px;
+@media(max-width:390px){
+  .nav a{font-size:11px;padding:6px 6px}
+  .logo{font-size:14px;letter-spacing:2px}
+  .btn{width:100%;margin:7px 0}
 }
 
-textarea{
-  min-height:100px;
-  resize:vertical;
-}
 
-input:focus,
-select:focus,
-textarea:focus,
-button:focus,
-a:focus{
-  outline:3px solid #ffd700;
-  outline-offset:2px;
-}
-
-.cart-item{
-  border-bottom:1px solid #444;
-  padding:15px 0;
-}
-
-.cart-item:last-child{
-  border-bottom:0;
-}
-
-.cart-name{
-  color:#ffd700;
-  font-weight:bold;
-}
-
-.cart-controls{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  margin-top:10px;
-  flex-wrap:wrap;
-}
-
-.qty-btn{
-  width:38px;
-  height:38px;
-  border:0;
-  border-radius:6px;
-  background:#555;
-  color:#fff;
-  cursor:pointer;
-  font-size:20px;
-}
-
-.remove-btn{
-  background:#7b1b1b;
-  color:#fff;
-  border:0;
-  padding:8px 12px;
-  border-radius:6px;
-  cursor:pointer;
-}
-
-.summary{
-  border-top:1px solid #555;
-  margin-top:20px;
-  padding-top:20px;
-}
-
-.summary-row{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  margin:8px 0;
-}
-
-.total{
-  font-size:25px;
-  color:#ffd700;
-  font-weight:bold;
-  border-top:1px solid #555;
-  padding-top:15px;
-  margin-top:15px;
-}
-
-.payment-option{
-  background:#1b1b1b;
-  border:1px solid #444;
-  border-radius:8px;
-  padding:15px;
-  margin:10px 0;
-}
-
-.payment-option input{
-  width:auto;
-  margin-right:8px;
-}
-
-.bank-box{
-  background:#111;
-  border:1px solid #555;
-  border-radius:10px;
-  padding:20px;
-  margin-top:15px;
-}
-
-.bank-name{
-  color:#70b7ff;
-  font-size:22px;
-  font-weight:bold;
-}
-
-.account-holder{
-  color:#ffd700;
-  font-size:20px;
-  font-weight:bold;
-}
-
-.warning{
-  background:#3b2d00;
-  border:1px solid #8c6d00;
-  color:#ffe9a0;
-  padding:15px;
-  border-radius:8px;
-  margin:15px 0;
-}
-
-.success{
-  display:none;
-  background:#123d20;
-  border:1px solid #2d9b4d;
-  color:#d7ffe1;
-  border-radius:10px;
-  padding:20px;
-  margin-top:20px;
-}
-
-.small-text{
-  font-size:14px;
-  color:#aaa;
-}
-
-/* CONTACT */
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:18px;
+.contact-modern{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  max-width:980px;
+  margin:0 auto;
 }
 
 .contact-card{
-  background:#242424;
-  border:1px solid #444;
-  border-radius:10px;
-  padding:20px;
+  min-width:0;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:16px 17px;
+  background:linear-gradient(145deg,#171717,#0e0e0e);
+  border:1px solid #4c3d14;
+  border-radius:14px;
+  color:#eee;
+  transition:transform .18s ease,border-color .18s ease,background .18s ease;
+  overflow:hidden;
 }
 
-.contact-card h3{
-  color:#ffd700;
+a.contact-card:hover{
+  transform:translateY(-2px);
+  border-color:#d4af37;
+  background:#18150b;
 }
 
-/* IMAGE MODAL */
-
-.image-modal{
-  display:none;
-  position:fixed;
-  z-index:3000;
-  inset:0;
-  background:rgba(0,0,0,.92);
-  align-items:center;
-  justify-content:center;
-  padding:30px;
+.contact-icon{
+  flex:0 0 48px;
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  border:1px solid #6a551b;
+  background:#090909;
+  color:#d4af37;
+  font-weight:700;
+  font-size:25px;
+  line-height:1;
 }
 
-.image-modal.show{
-  display:flex;
+.phone-icon{font-size:24px}
+.email-icon{font-size:23px}
+.instagram-icon{font-size:31px}
+.facebook-icon{font-family:Arial;font-size:31px}
+.youtube-icon{font-size:20px}
+.site-icon{font-size:27px}
+
+.contact-copy{
+  min-width:0;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:2px;
 }
 
-.image-modal img{
-  max-width:95vw;
-  max-height:90vh;
-  object-fit:contain;
-  border-radius:10px;
+.contact-copy strong{
+  color:#d4af37;
+  font-size:13px;
+  letter-spacing:.3px;
+  line-height:1.35;
 }
 
-.close-modal{
-  position:absolute;
-  top:15px;
-  right:20px;
-  width:45px;
-  height:45px;
-  border:0;
-  border-radius:50%;
-  background:#c62828;
-  color:#fff;
-  font-size:30px;
-  cursor:pointer;
+.contact-copy span{
+  color:#eee;
+  font-size:15px;
+  line-height:1.45;
+  overflow-wrap:anywhere;
+  word-break:break-word;
 }
 
-/* FOOTER */
-
-footer{
-  background:#111;
-  border-top:1px solid #333;
-  padding:30px 0;
-  text-align:center;
-  color:#aaa;
+.contact-arrow{
+  flex:0 0 auto;
+  color:#d4af37;
+  font-size:26px;
+  line-height:1;
 }
 
-.hidden{
-  display:none !important;
+@media(max-width:650px){
+  .contact-modern{grid-template-columns:1fr}
+  .contact-card{padding:14px}
+  .contact-icon{flex-basis:44px;width:44px;height:44px}
+  .contact-copy span{font-size:14px}
 }
+
+@media(max-width:390px){
+  .contact-card{gap:11px}
+  .contact-icon{flex-basis:40px;width:40px;height:40px}
+  .contact-copy strong{font-size:12px}
+  .contact-copy span{font-size:13px}
+}
+
 </style>
 </head>
-
 <body>
+<!--
+  KNIFEMAKERSHOP IMAGE MAP
+  MATERIALS:
+    Leaf Spring illustration: assets/leaf-spring-steel.svg
+    SUP9 illustration: assets/sup9-steel.svg
+  USER KNIFE WORKS:
+    assets/IMG_6573.jpeg
+    assets/IMG_8502.jpeg
+    assets/IMG_8522.jpeg
+    assets/IMG_0292.jpeg
+    assets/IMG_0185.jpeg
+    assets/att.11vBzaH3PF0DVsUvrecRhNDqp1_WCdGiljPIBULXHa8/IMG_8827.jpeg
+    assets/IMG_8826.png
+-->
+
+<header><div class="wrap"><nav class="nav">
+<a href="#home">หน้าหลัก / Home</a><a href="#about">เกี่ยวกับเรา / About</a><a href="#materials">วัสดุ / Materials</a><a href="#works">ผลงาน / Works</a><a href="#prices">ราคา / Prices</a><a href="#order">สั่งซื้อ / Order</a><a href="#payment">ชำระเงิน / Payment</a><a href="#contact">ติดต่อ / Contact</a>
+</nav></div></header>
+
+<main id="home">
+<section class="hero"><div class="wrap"><div class="logo">⚒ CK NAM • KNIFEMAKERSHOP 🇹🇭</div><h1>HANDMADE KNIVES</h1><h2>MADE WITH PASSION</h2><p>มีดทำมือ ตีร้อนขึ้นรูปด้วยความตั้งใจ</p><p>Handmade knives, hot forged with care and craftsmanship.</p><a class="btn" href="#works">ดูผลงาน / VIEW WORKS</a><a class="btn dark" href="#order">สั่งซื้อ / ORDER</a></div></section>
+
+<section id="about"><div class="wrap"><h2 class="section-title">เกี่ยวกับเรา / ABOUT</h2><p class="sub">เริ่มทำมีดตั้งแต่ปี 2018 จากแรงบันดาลใจจากมีดพื้นบ้านโบราณ รักษางานช่างแบบดั้งเดิมและพัฒนารูปแบบมีดทำมือให้สวยงาม</p><p class="sub">Making knives since 2018, inspired by traditional folk knives, preserving traditional craftsmanship while developing beautiful handmade knife designs.</p>
+<div class="grid"><article class="panel"><h3>ตีร้อนขึ้นรูป / Hot Forging</h3><p>ขึ้นรูปแต่ละชิ้นด้วยการตีร้อน เพื่อความแข็งแรงและทนทาน.</p><p>Each piece is hot forged to achieve strength and durability.</p></article><article class="panel"><h3>อบชุบตามกระบวนการ / Heat Treatment</h3><p>อบชุบเหล็กตามกระบวนการ เพื่อเสริมความแข็งแรงและทนทาน.</p><p>The steel is heat treated according to the proper process to enhance strength and durability.</p></article></div></div></section>
+
+<section id="materials"><div class="wrap"><h2 class="section-title">วัสดุ / MATERIALS</h2><p class="sub">ส่วนนี้ใช้ภาพประกอบของวัสดุโดยเฉพาะ — ไม่ใช้รูปผลงานมีดของคุณ</p>
+<div class="grid">
+<article class="panel material"><img src="assets/leaf-spring-steel.svg" alt="Leaf Spring Steel / เหล็กแหนบ"><h3>เหล็กแหนบ / LEAF SPRING STEEL</h3><ul><li>มีความแข็งแรง / Strong</li><li>มีความยืดหยุ่น / Flexible</li><li>มีความเหนียว / Tough</li><li>เหมาะสำหรับงานมีดที่ต้องการความทนทาน / Suitable for knives requiring durability</li></ul></article>
+<article class="panel material"><img src="assets/sup9-steel.svg" alt="SUP9 Steel / เหล็ก SUP9"><h3>SUP9 / SUP9 STEEL</h3><ul><li>มีความแข็งแรงสูง / High strength</li><li>มีความแข็งและทนทาน / Hard and durable</li><li>ทนต่อการสึกหรอ / Wear resistant</li><li>เหมาะสำหรับงานมีดที่ต้องการความทนทาน / Suitable for knives requiring durability</li></ul></article>
+</div></div></section>
+
+<section id="works"><div class="wrap"><h2 class="section-title">ผลงานมีด / KNIFE WORKS</h2><p class="sub">รูปด้านล่างเป็นพื้นที่สำหรับรูปผลงานของคุณโดยเฉพาะ ไม่ใช้แทนภาพวัสดุ</p>
+<div class="works-tools"><button class="size-btn" data-size="small">เล็ก / Small</button><button class="size-btn active" data-size="medium">ปานกลาง / Medium</button><button class="size-btn" data-size="large">ใหญ่ / Large</button></div>
+<h3 class="work-group-title">มีดขนาดเล็ก / SMALL KNIFE — 3–5 inches — 690–990 THB</h3>
+<div class="products medium" id="smallProducts">
+<article class="product"><img src="assets/IMG_6573.jpeg" alt="Knife work 1"><div class="body"><h4>ผลงานมีด / Knife Work</h4><p>ใบมีด 3–5 นิ้ว / 3–5 inch blade</p><p class="price">690–990 THB</p><p>ด้ามมีด: ไม้พะยูง / Knife Handle: Siamese Rosewood</p><a class="order" href="#order" data-item="Knife Work 1">สั่งซื้อ / ORDER</a></div></article>
+<article class="product"><img src="assets/IMG_8502.jpeg" alt="Knife work 2"><div class="body"><h4>ผลงานมีด / Knife Work</h4><p>ใบมีด 3–5 นิ้ว / 3–5 inch blade</p><p class="price">690–990 THB</p><p>ด้ามมีด: ไม้พะยูง / Knife Handle: Siamese Rosewood</p><a class="order" href="#order" data-item="Knife Work 2">สั่งซื้อ / ORDER</a></div></article>
+<article class="product"><img src="assets/IMG_8522.jpeg" alt="Knife work 3"><div class="body"><h4>ผลงานมีด / Knife Work</h4><p>ใบมีด 3–5 นิ้ว / 3–5 inch blade</p><p class="price">690–990 THB</p><p>ด้ามมีด: ไม้พะยูง / Knife Handle: Siamese Rosewood</p><a class="order" href="#order" data-item="Knife Work 3">สั่งซื้อ / ORDER</a></div></article>
+<article class="product"><img src="assets/IMG_0292.jpeg" alt="Knife work 4"><div class="body"><h4>ผลงานมีด / Knife Work</h4><p>ใบมีด 3–5 นิ้ว / 3–5 inch blade</p><p class="price">690–990 THB</p><p>ด้ามมีด: ไม้พะยูง / Knife Handle: Siamese Rosewood</p><a class="order" href="#order" data-item="Knife Work 4">สั่งซื้อ / ORDER</a></div></article>
+</div>
+<h3 class="work-group-title">มีดขนาดกลาง / MEDIUM KNIFE — 6–10 inches — 1,400–1,600 THB</h3>
+<div class="products medium">
+<article class="product"><img src="assets/IMG_0185.jpeg" alt="Knife work 5"><div class="body"><h4>ผลงานมีด / Knife Work</h4><p>ใบมีด 6–10 นิ้ว / 6–10 inch blade</p><p class="price">1,400–1,600 THB</p><p>ด้ามมีด: ไม้พะยูง / Knife Handle: Siamese Rosewood</p><a class="order" href="#order" data-item="Knife Work 5">สั่งซื้อ / ORDER</a></div></article>
+<article class="product"><img src="assets/att.11vBzaH3PF0DVsUvrecRhNDqp1_WCdGiljPIBULXHa8/IMG_8827.jpeg" alt="Knife work 6"><div class="body"><h4>ผลงานมีด / Knife Work</h4><p>ใบมีด 6–10 นิ้ว / 6–10 inch blade</p><p class="price">1,400–1,600 THB</p><p>ด้ามมีด: ไม้พะยูง / Knife Handle: Siamese Rosewood</p><a class="order" href="#order" data-item="Knife Work 6">สั่งซื้อ / ORDER</a></div></article>
+<article class="product"><img src="assets/IMG_8826.png" alt="Knife work 7"><div class="body"><h4>ผลงานมีด / Knife Work</h4><p>ใบมีด 6–10 นิ้ว / 6–10 inch blade</p><p class="price">1,400–1,600 THB</p><p>ด้ามมีด: ไม้พะยูง / Knife Handle: Siamese Rosewood</p><a class="order" href="#order" data-item="Knife Work 7">สั่งซื้อ / ORDER</a></div></article>
+</div><div class="notice">ค่าจัดส่ง / Shipping: <span class="price">+100 THB</span></div></div></section>
+
+<section id="prices"><div class="wrap"><h2 class="section-title">ราคา / PRICES</h2><div class="grid"><div class="panel"><h3>มีดขนาดเล็ก / Small Knife</h3><p>3–5 นิ้ว / 3–5 inches</p><p class="price">690–990 THB</p></div><div class="panel"><h3>มีดขนาดกลาง / Medium Knife</h3><p>6–10 นิ้ว / 6–10 inches</p><p class="price">1,400–1,600 THB</p></div></div><div class="notice">ค่าจัดส่ง / Shipping: <span class="price">+100 THB</span></div></div></section>
+
+<section id="order"><div class="wrap"><h2 class="section-title">สั่งซื้อ / ORDER</h2><div class="panel order-panel"><p>รายการสั่งซื้อ / Order item</p><input id="item" style="width:100%;padding:12px;background:#0b0b0b;color:#fff;border:1px solid #4c3d14;border-radius:7px" placeholder="เลือกรายการจากปุ่ม ORDER ด้านบน"><p style="margin-top:15px"><a class="btn" id="emailOrder" href="mailto:knifemakershop@hotmail.com?subject=KnifeMakerShop%20Order">ส่งคำสั่งซื้อทางอีเมล / SEND ORDER</a></p></div></div></section>
+
+<section id="payment"><div class="wrap"><h2 class="section-title">ชำระเงิน / PAYMENT</h2><div class="panel payment"><div class="bank">KASIKORNBANK</div><p>ชื่อบัญชี / Account Name</p><div class="account">กานติมา / Kantima</div><div class="notice">⚠️ ชำระเงิน / โอนเงินเข้าบัญชีนี้เท่านั้น<br>บัญชีเดียวเท่านั้น<br>ONLY ONE ACCOUNT.</div></div></div></section>
 
-<header>
-  <div class="nav">
-
-    <div class="logo">
-      KNIFEMAKERSHOP
-    </div>
-
-    <nav aria-label="Main navigation">
-      <a href="#home">หน้าแรก / Home</a>
-      <a href="#about">เกี่ยวกับ / About</a>
-      <a href="#materials">วัสดุ / Materials</a>
-      <a href="#works">ผลงาน / Works</a>
-      <a href="#prices">ราคา / Prices</a>
-      <a href="#order">สั่งซื้อ / Order</a>
-      <a href="#payment">ชำระเงิน / Payment</a>
-      <a href="#contact">ติดต่อ / Contact</a>
-    </nav>
-
-  </div>
-</header>
-
-
-<!-- HOME -->
-
-<section id="home" class="hero">
-
-  <div class="container">
-
-    <h1>CK NAM</h1>
-
-    <h2>KNIFEMAKERSHOP</h2>
-
-    <p>
-      HANDMADE KNIVES, MADE WITH PASSION
-    </p>
-
-    <p>
-      มีดทำมือจากช่างมีด CK Nam
-      <br>
-      Handmade knives by CK Nam
-    </p>
-
-    <a class="btn" href="#works">
-      ดูผลงาน / VIEW WORKS
-    </a>
-
-    <a class="btn secondary" href="#order">
-      สั่งซื้อ / ORDER
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about">
-
-  <div class="container">
-
-    <h2 class="section-title">
-      เกี่ยวกับเรา / ABOUT
-    </h2>
-
-    <div class="card about-text">
-
-      <p>
-        เริ่มทำมีดตั้งแต่ปี 2018
-        โดยศึกษาแรงบันดาลใจจากมีดพื้นบ้านโบราณ
-        และนำภูมิปัญญาการทำมีดแบบดั้งเดิมมาพัฒนา
-        ให้เกิดรูปแบบมีดทำมือที่สวยงามและมีเอกลักษณ์
-      </p>
-
-      <p>
-        Started making knives in 2018,
-        inspired by traditional folk knives.
-        We preserve traditional craftsmanship
-        while developing beautiful handmade knife designs.
-      </p>
-
-      <p>
-        กระบวนการผลิตใช้การตีร้อนขึ้นรูป
-        และผ่านกระบวนการอบชุบตามขั้นตอน
-      </p>
-
-      <p>
-        Each knife is hot forged and heat-treated
-        through the appropriate process.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- MATERIALS -->
-
-<section id="materials">
-
-  <div class="container">
-
-    <h2 class="section-title">
-      วัสดุ / MATERIALS
-    </h2>
-
-    <div class="materials">
-
-      <!-- ห้ามลบภาพนี้ -->
-      <div class="material">
-
-        <img
-          src="./assets/leaf-spring-steel.svg"
-          alt="Leaf Spring Steel / เหล็กแหนบ"
-          class="zoomable"
-        >
-
-        <h3>
-          เหล็กแหนบ / Leaf Spring Steel
-        </h3>
-
-        <p>
-          เหล็กแหนบนำมาตีร้อนขึ้นรูป
-          และผ่านกระบวนการอบชุบตามขั้นตอน
-        </p>
-
-        <p>
-          Leaf spring steel is hot forged
-          and heat-treated through the proper process.
-        </p>
-
-      </div>
-
-
-      <!-- ห้ามลบภาพนี้ -->
-      <div class="material">
-
-        <img
-          src="./assets/sup9-steel.svg"
-          alt="SUP9 Steel / เหล็ก SUP9"
-          class="zoomable"
-        >
-
-        <h3>
-          เหล็ก SUP9 / SUP9 Steel
-        </h3>
-
-        <p>
-          เหล็ก SUP9 สำหรับงานตีร้อนขึ้นรูป
-          และผ่านกระบวนการอบชุบ
-        </p>
-
-        <p>
-          SUP9 steel is hot forged
-          and heat-treated through the appropriate process.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- WORKS -->
-
-<section id="works">
-
-  <div class="container">
-
-    <h2 class="section-title">
-      ผลงานมีด / OUR KNIFE WORKS
-    </h2>
-
-    <p style="text-align:center;color:#ccc;">
-      คลิกที่รูปเพื่อขยาย / Click an image to zoom
-    </p>
-
-
-    <div class="filter-buttons">
-
-      <button
-        class="btn"
-        type="button"
-        onclick="showCategory('small')">
-        มีดขนาดเล็ก / SMALL
-      </button>
-
-      <button
-        class="btn"
-        type="button"
-        onclick="showCategory('medium')">
-        มีดขนาดปานกลาง / MEDIUM
-      </button>
-
-      <button
-        class="btn secondary"
-        type="button"
-        onclick="showCategory('large')">
-        มีดขนาดใหญ่ / LARGE
-      </button>
-
-    </div>
-
-
-    <!-- SMALL -->
-
-    <div id="smallCategory">
-
-      <h3 class="category-title">
-        มีดขนาดเล็ก / SMALL KNIVES
-        <br>
-        ใบมีดยาว 3–5 นิ้ว / Blade length 3–5 inches
-      </h3>
-
-      <div class="products">
-
-
-        <article class="product">
-
-          <img
-            src="./assets/IMG_6573.jpeg"
-            alt="Knife Work 1"
-            class="product-image zoomable"
-          >
-
-          <div class="product-content">
-
-            <h3>
-              Knife Work 1
-            </h3>
-
-            <p>
-              มีดทำมือขนาดเล็ก
-              <br>
-              Handmade small knife
-            </p>
-
-            <div class="price">
-              690–990 บาท / THB
-            </div>
-
-            <p class="small-text">
-              ราคาไม่รวมค่าจัดส่ง
-              <br>
-              Price does not include shipping.
-            </p>
-
-            <button
-              class="btn order"
-              data-name="Knife Work 1"
-              data-price="690"
-              data-range="690–990 THB"
-              type="button">
-              สั่งซื้อ / ORDER
-            </button>
-
-          </div>
-
-        </article>
-
-
-        <article class="product">
-
-          <img
-            src="./assets/IMG_8502.jpeg"
-            alt="Knife Work 2"
-            class="product-image zoomable"
-          >
-
-          <div class="product-content">
-
-            <h3>
-              Knife Work 2
-            </h3>
-
-            <p>
-              มีดทำมือขนาดเล็ก
-              <br>
-              Handmade small knife
-            </p>
-
-            <div class="price">
-              690–990 บาท / THB
-            </div>
-
-            <p class="small-text">
-              ราคาไม่รวมค่าจัดส่ง
-              <br>
-              Price does not include shipping.
-            </p>
-
-            <button
-              class="btn order"
-              data-name="Knife Work 2"
-              data-price="690"
-              data-range="690–990 THB"
-              type="button">
-              สั่งซื้อ / ORDER
-            </button>
-
-          </div>
-
-        </article>
-
-
-        <article class="product">
-
-          <img
-            src="./assets/IMG_8522.jpeg"
-            alt="Knife Work 3"
-            class="product-image zoomable"
-          >
-
-          <div class="product-content">
-
-            <h3>
-              Knife Work 3
-            </h3>
-
-            <p>
-              มีดทำมือขนาดเล็ก
-              <br>
-              Handmade small knife
-            </p>
-
-            <div class="price">
-              690–990 บาท / THB
-            </div>
-
-            <p class="small-text">
-              ราคาไม่รวมค่าจัดส่ง
-              <br>
-              Price does not include shipping.
-            </p>
-
-            <button
-              class="btn order"
-              data-name="Knife Work 3"
-              data-price="690"
-              data-range="690–990 THB"
-              type="button">
-              สั่งซื้อ / ORDER
-            </button>
-
-          </div>
-
-        </article>
-
-
-        <article class="product">
-
-          <img
-            src="./assets/IMG_0292.jpeg"
-            alt="Knife Work 4"
-            class="product-image zoomable"
-          >
-
-          <div class="product-content">
-
-            <h3>
-              Knife Work 4
-            </h3>
-
-            <p>
-              มีดทำมือขนาดเล็ก
-              <br>
-              Handmade small knife
-            </p>
-
-            <div class="price">
-              690–990 บาท / THB
-            </div>
-
-            <p class="small-text">
-              ราคาไม่รวมค่าจัดส่ง
-              <br>
-              Price does not include shipping.
-            </p>
-
-            <button
-              class="btn order"
-              data-name="Knife Work 4"
-              data-price="690"
-              data-range="690–990 THB"
-              type="button">
-              สั่งซื้อ / ORDER
-            </button>
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </div>
-
-
-    <!-- MEDIUM -->
-
-    <div id="mediumCategory" class="hidden">
-
-      <h3 class="category-title">
-        มีดขนาดปานกลาง / MEDIUM KNIVES
-        <br>
-        ใบมีดยาว 6–10 นิ้ว / Blade length 6–10 inches
-      </h3>
-
-      <div class="products">
-
-
-        <article class="product">
-
-          <img
-            src="./assets/IMG_0185.jpeg"
-            alt="Knife Work 5"
-            class="product-image zoomable"
-          >
-
-          <div class="product-content">
-
-            <h3>
-              Knife Work 5
-            </h3>
-
-            <p>
-              มีดทำมือขนาดปานกลาง
-              <br>
-              Handmade medium knife
-            </p>
-
-            <div class="price">
-              1,400–1,600 บาท / THB
-            </div>
-
-            <p class="small-text">
-              ราคาไม่รวมค่าจัดส่ง
-              <br>
-              Price does not include shipping.
-            </p>
-
-            <button
-              class="btn order"
-              data-name="Knife Work 5"
-              data-price="1400"
-              data-range="1,400–1,600 THB"
-              type="button">
-              สั่งซื้อ / ORDER
-            </button>
-
-          </div>
-
-        </article>
-
-
-        <article class="product">
-
-          <img
-            src="./assets/att.11vBzaH3PF0DVsUvrecRhNDqp1_WCdGiljPIBULXHa8/IMG_8827.jpeg"
-            alt="Knife Work 6"
-            class="product-image zoomable"
-          >
-
-          <div class="product-content">
-
-            <h3>
-              Knife Work 6
-            </h3>
-
-            <p>
-              มีดทำมือขนาดปานกลาง
-              <br>
-              Handmade medium knife
-            </p>
-
-            <div class="price">
-              1,400–1,600 บาท / THB
-            </div>
-
-            <p class="small-text">
-              ราคาไม่รวมค่าจัดส่ง
-              <br>
-              Price does not include shipping.
-            </p>
-
-            <button
-              class="btn order"
-              data-name="Knife Work 6"
-              data-price="1400"
-              data-range="1,400–1,600 THB"
-              type="button">
-              สั่งซื้อ / ORDER
-            </button>
-
-          </div>
-
-        </article>
-
-
-        <article class="product">
-
-          <img
-            src="./assets/IMG_8826.png"
-            alt="Knife Work 7"
-            class="product-image zoomable"
-          >
-
-          <div class="product-content">
-
-            <h3>
-              Knife Work 7
-            </h3>
-
-            <p>
-              มีดทำมือขนาดปานกลาง
-              <br>
-              Handmade medium knife
-            </p>
-
-            <div class="price">
-              1,400–1,600 บาท / THB
-            </div>
-
-            <p class="small-text">
-              ราคาไม่รวมค่าจัดส่ง
-              <br>
-              Price does not include shipping.
-            </p>
-
-            <button
-              class="btn order"
-              data-name="Knife Work 7"
-              data-price="1400"
-              data-range="1,400–1,600 THB"
-              type="button">
-              สั่งซื้อ / ORDER
-            </button>
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </div>
-
-
-    <!-- LARGE -->
-
-    <div id="largeCategory" class="hidden">
-
-      <div class="empty-category">
-
-        ยังไม่มีรายการมีดขนาดใหญ่
-        <br>
-        No large knives listed yet.
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- PRICES -->
-
-<section id="prices">
-
-  <div class="container">
-
-    <h2 class="section-title">
-      ราคา / PRICES
-    </h2>
-
-    <table class="price-table">
-
-      <thead>
-
-        <tr>
-          <th>
-            ประเภท / Type
-          </th>
-
-          <th>
-            ขนาด / Size
-          </th>
-
-          <th>
-            ราคา / Price
-          </th>
-        </tr>
-
-      </thead>
-
-      <tbody>
-
-        <tr>
-
-          <td>
-            มีดขนาดเล็ก
-            <br>
-            Small Knife
-          </td>
-
-          <td>
-            ใบมีดยาว 3–5 นิ้ว
-            <br>
-            Blade length 3–5 inches
-          </td>
-
-          <td>
-            690–990 THB
-          </td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-            มีดขนาดกลาง
-            <br>
-            Medium Knife
-          </td>
-
-          <td>
-            ใบมีดยาว 6–10 นิ้ว
-            <br>
-            Blade length 6–10 inches
-          </td>
-
-          <td>
-            1,400–1,600 THB
-          </td>
-
-        </tr>
-
-      </tbody>
-
-    </table>
-
-    <div class="note">
-
-      <strong>
-        หมายเหตุ / Note:
-      </strong>
-
-      ราคาสินค้ายังไม่รวมค่าจัดส่ง
-      หากจัดส่งภายในประเทศไทย เพิ่ม 100 บาท
-
-      <br>
-
-      Prices do not include shipping.
-      Add 100 THB for shipping within Thailand.
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ORDER -->
-
-<section id="order">
-
-  <div class="container">
-
-    <h2 class="section-title">
-      สั่งซื้อ / ORDER
-    </h2>
-
-    <div class="warning">
-
-      <strong>
-        สำคัญ / Important:
-      </strong>
-
-      ราคาที่ใช้คำนวณในตะกร้าเป็น
-      “ราคาเริ่มต้น” ของช่วงราคา
-      ราคาสุดท้ายของมีดแต่ละชิ้นต้องยืนยันกับผู้ขายก่อนชำระเงินจริง
-
-      <br><br>
-
-      The cart uses the starting price of each price range.
-      The final price must be confirmed before payment.
-
-    </div>
-
-
-    <div class="order-layout">
-
-
-      <!-- CUSTOMER -->
-
-      <div class="card">
-
-        <h3>
-          ข้อมูลผู้สั่งซื้อ / CUSTOMER INFORMATION
-        </h3>
-
-
-        <label for="customerName">
-          ชื่อ / Name
-        </label>
-
-        <input
-          id="customerName"
-          type="text"
-          autocomplete="name"
-          placeholder="ชื่อของคุณ / Your name"
-        >
-
-
-        <label for="customerEmail">
-          อีเมล / Email
-        </label>
-
-        <input
-          id="customerEmail"
-          type="email"
-          autocomplete="email"
-          placeholder="your@email.com"
-        >
-
-
-        <label for="customerPhone">
-          โทรศัพท์ / Phone
-        </label>
-
-        <input
-          id="customerPhone"
-          type="tel"
-          autocomplete="tel"
-          placeholder="เบอร์โทรศัพท์ / Phone number"
-        >
-
-
-        <label for="country">
-          ประเทศ / Country
-        </label>
-
-        <select id="country">
-
-          <option value="Thailand">
-            Thailand / ประเทศไทย
-          </option>
-
-          <option value="International">
-            Other Country / ต่างประเทศ
-          </option>
-
-        </select>
-
-
-        <label for="customerAddress">
-          ที่อยู่จัดส่ง / Shipping Address
-        </label>
-
-        <textarea
-          id="customerAddress"
-          autocomplete="street-address"
-          placeholder="กรุณาระบุที่อยู่จัดส่ง / Please enter your shipping address"
-        ></textarea>
-
-
-        <label>
-          วิธีชำระเงิน / Payment Method
-        </label>
-
-
-        <div class="payment-option">
-
-          <label>
-
-            <input
-              type="radio"
-              name="paymentMethod"
-              value="bank"
-              checked
-            >
-
-            โอนเงินธนาคาร
-            / Bank Transfer
-
-          </label>
-
-        </div>
-
-
-        <div class="payment-option">
-
-          <label>
-
-            <input
-              type="radio"
-              name="paymentMethod"
-              value="online"
-            >
-
-            ชำระออนไลน์
-            / Online Payment
-
-          </label>
-
-        </div>
-
-
-        <div id="bankPaymentInfo">
-
-          <div class="bank-box">
-
-            <div class="bank-name">
-              KASIKORNBANK
-            </div>
-
-            <p>
-              ธนาคารกสิกรไทย
-              / Kasikornbank
-            </p>
-
-            <p>
-              ชื่อบัญชี / Account Holder:
-            </p>
-
-            <div class="account-holder">
-              กานติมา / Kantima
-            </div>
-
-            <p class="small-text">
-              กรุณาติดต่อร้านเพื่อรับรายละเอียดบัญชีสำหรับการโอน
-              และส่งหลักฐานการโอนหลังชำระเงิน
-            </p>
-
-            <p class="small-text">
-              Please contact the shop for bank transfer details
-              and send the payment proof after transferring.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <div id="onlinePaymentInfo" class="hidden">
-
-          <div class="bank-box">
-
-            <h3>
-              ชำระออนไลน์ / ONLINE PAYMENT
-            </h3>
-
-            <p>
-              หลังจากยืนยันรายการ
-              คุณสามารถใช้ปุ่มชำระออนไลน์ด้านล่าง
-              เพื่อไปยังหน้าชำระเงินของผู้ให้บริการภายนอก
-            </p>
-
-            <p>
-              After confirming your order,
-              use the online payment button below
-              to continue to the external hosted payment page.
-            </p>
-
-            <a
-              id="stripePayButton"
-              class="btn green"
-              href="#"
-              target="_blank"
-              rel="noopener"
-            >
-              ชำระออนไลน์ / PAY ONLINE
-            </a>
-
-            <p class="small-text">
-              * ต้องใส่ Payment Link จริงของร้านก่อนใช้งาน
-              <br>
-              * A real payment link must be configured before use.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <button
-          id="confirmOrder"
-          class="btn"
-          type="button">
-          ยืนยันคำสั่งซื้อ / CONFIRM ORDER
-        </button>
-
-
-        <button
-          id="emailOrder"
-          class="btn secondary"
-          type="button">
-          ส่งคำสั่งซื้อทางอีเมล / EMAIL ORDER
-        </button>
-
-
-        <div
-          id="orderSuccess"
-          class="success">
-        </div>
-
-      </div>
-
-
-      <!-- CART -->
-
-      <div class="card">
-
-        <h3>
-          ตะกร้าสินค้า / SHOPPING CART
-        </h3>
-
-        <div id="cartItems">
-
-          <p style="color:#aaa;">
-            ยังไม่มีสินค้าในตะกร้า
-            <br>
-            No products in cart.
-          </p>
-
-        </div>
-
-
-        <div class="summary">
-
-          <div class="summary-row">
-
-            <span>
-              ค่าสินค้า / Products
-            </span>
-
-            <strong id="subtotal">
-              0 THB
-            </strong>
-
-          </div>
-
-
-          <div class="summary-row">
-
-            <span>
-              ค่าจัดส่ง / Shipping
-            </span>
-
-            <strong id="shipping">
-              0 THB
-            </strong>
-
-          </div>
-
-
-          <div class="total">
-
-            <div class="summary-row">
-
-              <span>
-                ยอดรวม / TOTAL
-              </span>
-
-              <strong id="total">
-                0 THB
-              </strong>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <p class="small-text">
-
-          ประเทศไทย:
-          ค่าจัดส่ง +100 THB
-
-          <br>
-
-          Thailand:
-          Shipping +100 THB
-
-          <br><br>
-
-          ต่างประเทศ:
-          ค่าจัดส่งต้องสอบถามและยืนยันก่อน
-
-          <br>
-
-          International:
-          Shipping cost must be confirmed separately.
-
-        </p>
-
-
-        <button
-          id="clearCart"
-          class="btn secondary"
-          type="button">
-          ล้างตะกร้า / CLEAR CART
-        </button>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- PAYMENT -->
-
-<section id="payment">
-
-  <div class="container">
-
-    <h2 class="section-title">
-      การชำระเงิน / PAYMENT
-    </h2>
-
-    <div class="card">
-
-      <div class="bank-box">
-
-        <div class="bank-name">
-          KASIKORNBANK
-        </div>
-
-        <p>
-          ธนาคารกสิกรไทย
-          / Kasikornbank
-        </p>
-
-        <p>
-          ชื่อบัญชี / Account Holder
-        </p>
-
-        <div class="account-holder">
-          กานติมา / Kantima
-        </div>
-
-      </div>
-
-
-      <p>
-
-        สำหรับการโอนเงินผ่านธนาคาร
-        กรุณาติดต่อร้านเพื่อรับรายละเอียดบัญชี
-        และหลังจากโอนเงินแล้ว
-        กรุณาส่งหลักฐานการชำระเงินทางอีเมล
-
-      </p>
-
-
-      <p>
-
-        For bank transfer,
-        please contact the shop for the account details.
-        After payment, please send the payment proof by email.
-
-      </p>
-
-
-      <a
-        class="btn"
-        href="mailto:knifemakershop@hotmail.com">
-        ส่งหลักฐานการชำระเงิน / SEND PAYMENT PROOF
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CONTACT -->
 
 <section id="contact">
+  <div class="wrap">
+    <h2 class="section-title">ติดต่อเรา / CONTACT US</h2>
+    <p class="sub">เลือกช่องทางที่สะดวกสำหรับติดต่อ KnifeMakerShop</p>
 
-  <div class="container">
+    <div class="contact-grid contact-modern">
 
-    <h2 class="section-title">
-      ติดต่อเรา / CONTACT US
-    </h2>
+      <a class="contact-card" href="tel:0959161778">
+        <span class="contact-icon phone-icon" aria-hidden="true">☎</span>
+        <span class="contact-copy">
+          <strong>โทรศัพท์ / PHONE</strong>
+          <span>095-916-1778</span>
+        </span>
+        <span class="contact-arrow">›</span>
+      </a>
 
-    <div class="contact-grid">
+      <a class="contact-card" href="mailto:knifemakershop@hotmail.com">
+        <span class="contact-icon email-icon" aria-hidden="true">✉</span>
+        <span class="contact-copy">
+          <strong>อีเมล / EMAIL</strong>
+          <span>knifemakershop@hotmail.com</span>
+        </span>
+        <span class="contact-arrow">›</span>
+      </a>
 
+      <a class="contact-card" href="https://www.instagram.com/knifemakershop1996/" target="_blank" rel="noopener">
+        <span class="contact-icon instagram-icon" aria-hidden="true">◎</span>
+        <span class="contact-copy">
+          <strong>Instagram</strong>
+          <span>@knifemakershop1996</span>
+        </span>
+        <span class="contact-arrow">›</span>
+      </a>
 
-      <div class="contact-card">
+      <a class="contact-card" href="https://www.facebook.com/" target="_blank" rel="noopener">
+        <span class="contact-icon facebook-icon" aria-hidden="true">f</span>
+        <span class="contact-copy">
+          <strong>Facebook</strong>
+          <span>CK Nam</span>
+        </span>
+        <span class="contact-arrow">›</span>
+      </a>
 
-        <h3>
-          โทรศัพท์ / Phone
-        </h3>
+      <a class="contact-card" href="https://www.facebook.com/" target="_blank" rel="noopener">
+        <span class="contact-icon facebook-icon" aria-hidden="true">f</span>
+        <span class="contact-copy">
+          <strong>Facebook Page</strong>
+          <span>CK Nam Shop personal</span>
+        </span>
+        <span class="contact-arrow">›</span>
+      </a>
 
-        <a href="tel:0959161778">
-          0959161778
-        </a>
+      <a class="contact-card" href="https://www.youtube.com/" target="_blank" rel="noopener">
+        <span class="contact-icon youtube-icon" aria-hidden="true">▶</span>
+        <span class="contact-copy">
+          <strong>YouTube</strong>
+          <span>CK Nam Chanel</span>
+        </span>
+        <span class="contact-arrow">›</span>
+      </a>
 
-      </div>
+      <div class="contact-card contact-site">
+        <span class="contact-icon site-icon" aria-hidden="true">⌂</span>
+        <span class="contact-copy">
+          <strong>เว็บไซต์ / WEBSITE</strong>
+          <span>https://knifemakershop.github.io/knifemakershop/</span>
+        </span>
+      </div>
 
-
-      <div class="contact-card">
-
-        <h3>
-          อีเมล / Email
-        </h3>
-
-        <a href="mailto:knifemakershop@hotmail.com">
-          knifemakershop@hotmail.com
-        </a>
-
-      </div>
-
-
-      <div class="contact-card">
-
-        <h3>
-          Instagram
-        </h3>
-
-        <p>
-          knifemakershop1996
-        </p>
-
-        <a
-          href="https://www.instagram.com/knifemakershop1996/"
-          target="_blank"
-          rel="noopener">
-          เปิด Instagram / Open Instagram
-        </a>
-
-      </div>
-
-
-      <div class="contact-card">
-
-        <h3>
-          Facebook
-        </h3>
-
-        <p>
-          CK Nam
-        </p>
-
-        <p>
-          CK Nam Shop personal
-        </p>
-
-        <a
-          href="https://www.facebook.com/"
-          target="_blank"
-          rel="noopener">
-          เปิด Facebook / Open Facebook
-        </a>
-
-      </div>
-
-
-      <div class="contact-card">
-
-        <h3>
-          YouTube
-        </h3>
-
-        <p>
-          CK Nam Chanel
-        </p>
-
-        <a
-          href="https://www.youtube.com/"
-          target="_blank"
-          rel="noopener">
-          เปิด YouTube / Open YouTube
-        </a>
-
-      </div>
-
-
-      <div class="contact-card">
-
-        <h3>
-          Website
-        </h3>
-
-        <p>
-          knifemakershop.github.io
-        </p>
-
-        <a
-          href="https://knifemakershop.github.io/knifemakershop/"
-          target="_blank"
-          rel="noopener">
-          เปิดเว็บไซต์ / Open Website
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
+    </div>
+  </div>
 </section>
 
-
-<footer>
-
-  <p>
-    © <span id="year"></span>
-    KnifeMakerShop — CK Nam
-  </p>
-
-  <p>
-    Handmade knives • Hot Forged • Traditional Craftsmanship
-  </p>
-
-</footer>
-
-
-<!-- IMAGE ZOOM MODAL -->
-
-<div
-  id="imageModal"
-  class="image-modal"
-  role="dialog"
-  aria-modal="true"
-  aria-label="Image preview">
-
-  <button
-    id="closeModal"
-    class="close-modal"
-    type="button"
-    aria-label="Close image">
-    ×
-  </button>
-
-  <img
-    id="modalImage"
-    src=""
-    alt="Expanded image"
-  >
-
-</div>
-
-
+</main><footer>CK NAM • KNIFEMAKERSHOP<br>HANDMADE KNIVES</footer>
 <script>
-
-/* =========================================
-   PAYMENT CONFIGURATION
-   =========================================
-
-   IMPORTANT:
-   ใส่ Stripe Payment Link จริงของร้านตรงนี้
-
-   ตัวอย่าง:
-   const STRIPE_PAYMENT_LINK =
-   "https://buy.stripe.com/xxxxxxxx";
-
-   ห้ามใส่ Secret Key ในไฟล์นี้
-   */
-
-const STRIPE_PAYMENT_LINK = "";
-
-
-/* =========================================
-   CART
-   ========================================= */
-
-let cart = [];
-
-
-/* =========================================
-   ELEMENTS
-   ========================================= */
-
-const cartItems =
-  document.getElementById("cartItems");
-
-const subtotalEl =
-  document.getElementById("subtotal");
-
-const shippingEl =
-  document.getElementById("shipping");
-
-const totalEl =
-  document.getElementById("total");
-
-const countryEl =
-  document.getElementById("country");
-
-const confirmOrderBtn =
-  document.getElementById("confirmOrder");
-
-const emailOrderBtn =
-  document.getElementById("emailOrder");
-
-const clearCartBtn =
-  document.getElementById("clearCart");
-
-const bankPaymentInfo =
-  document.getElementById("bankPaymentInfo");
-
-const onlinePaymentInfo =
-  document.getElementById("onlinePaymentInfo");
-
-const stripePayButton =
-  document.getElementById("stripePayButton");
-
-const successBox =
-  document.getElementById("orderSuccess");
-
-
-/* =========================================
-   CATEGORY FILTER
-   ========================================= */
-
-function showCategory(category){
-
-  document
-    .getElementById("smallCategory")
-    .classList.add("hidden");
-
-  document
-    .getElementById("mediumCategory")
-    .classList.add("hidden");
-
-  document
-    .getElementById("largeCategory")
-    .classList.add("hidden");
-
-
-  if(category === "small"){
-
-    document
-      .getElementById("smallCategory")
-      .classList.remove("hidden");
-
-  }
-
-
-  if(category === "medium"){
-
-    document
-      .getElementById("mediumCategory")
-      .classList.remove("hidden");
-
-  }
-
-
-  if(category === "large"){
-
-    document
-      .getElementById("largeCategory")
-      .classList.remove("hidden");
-
-  }
-
-}
-
-
-/* =========================================
-   ADD TO CART
-   ========================================= */
-
-document
-  .querySelectorAll(".order")
-  .forEach(button => {
-
-    button.addEventListener("click", () => {
-
-      const name =
-        button.dataset.name;
-
-      const price =
-        Number(button.dataset.price);
-
-      const range =
-        button.dataset.range;
-
-
-      const existing =
-        cart.find(item => item.name === name);
-
-
-      if(existing){
-
-        existing.qty++;
-
-      }else{
-
-        cart.push({
-          name:name,
-          price:price,
-          range:range,
-          qty:1
-        });
-
-      }
-
-
-      updateCart();
-
-      document
-        .getElementById("order")
-        .scrollIntoView({
-          behavior:"smooth"
-        });
-
-    });
-
-  });
-
-
-/* =========================================
-   UPDATE CART
-   ========================================= */
-
-function updateCart(){
-
-  if(cart.length === 0){
-
-    cartItems.innerHTML = `
-      <p style="color:#aaa;">
-        ยังไม่มีสินค้าในตะกร้า
-        <br>
-        No products in cart.
-      </p>
-    `;
-
-    subtotalEl.textContent = "0 THB";
-
-    shippingEl.textContent = "0 THB";
-
-    totalEl.textContent = "0 THB";
-
-    return;
-  }
-
-
-  let subtotal = 0;
-
-
-  cartItems.innerHTML = "";
-
-
-  cart.forEach((item,index) => {
-
-    const itemTotal =
-      item.price * item.qty;
-
-    subtotal += itemTotal;
-
-
-    const div =
-      document.createElement("div");
-
-    div.className = "cart-item";
-
-
-    div.innerHTML = `
-
-      <div class="cart-name">
-        ${escapeHTML(item.name)}
-      </div>
-
-      <div>
-        ${escapeHTML(item.range)}
-      </div>
-
-      <div>
-        ราคาเริ่มต้น / Starting price:
-        ${item.price.toLocaleString()} THB
-      </div>
-
-      <div class="cart-controls">
-
-        <button
-          class="qty-btn"
-          type="button"
-          onclick="changeQty(${index},-1)">
-          −
-        </button>
-
-        <strong>
-          ${item.qty}
-        </strong>
-
-        <button
-          class="qty-btn"
-          type="button"
-          onclick="changeQty(${index},1)">
-          +
-        </button>
-
-        <button
-          class="remove-btn"
-          type="button"
-          onclick="removeItem(${index})">
-          ลบ / Remove
-        </button>
-
-      </div>
-
-    `;
-
-
-    cartItems.appendChild(div);
-
-  });
-
-
-  subtotalEl.textContent =
-    subtotal.toLocaleString() + " THB";
-
-
-  if(countryEl.value === "Thailand"){
-
-    const shipping = 100;
-
-    const total =
-      subtotal + shipping;
-
-    shippingEl.textContent =
-      shipping.toLocaleString() + " THB";
-
-    totalEl.textContent =
-      total.toLocaleString() + " THB";
-
-  }else{
-
-    shippingEl.textContent =
-      "TBC / ต้องยืนยัน";
-
-    totalEl.textContent =
-      subtotal.toLocaleString() +
-      " THB + shipping";
-
-  }
-
-}
-
-
-/* =========================================
-   CHANGE QUANTITY
-   ========================================= */
-
-function changeQty(index,amount){
-
-  cart[index].qty += amount;
-
-
-  if(cart[index].qty <= 0){
-
-    cart.splice(index,1);
-
-  }
-
-
-  updateCart();
-
-}
-
-
-/* =========================================
-   REMOVE
-   ========================================= */
-
-function removeItem(index){
-
-  cart.splice(index,1);
-
-  updateCart();
-
-}
-
-
-/* =========================================
-   CLEAR CART
-   ========================================= */
-
-clearCartBtn.addEventListener(
-  "click",
-  () => {
-
-    cart = [];
-
-    updateCart();
-
-    successBox.style.display = "none";
-
-  }
-);
-
-
-/* =========================================
-   COUNTRY
-   ========================================= */
-
-countryEl.addEventListener(
-  "change",
-  updateCart
-);
-
-
-/* =========================================
-   PAYMENT METHOD
-   ========================================= */
-
-document
-  .querySelectorAll(
-    'input[name="paymentMethod"]'
-  )
-  .forEach(radio => {
-
-    radio.addEventListener(
-      "change",
-      updatePaymentDisplay
-    );
-
-  });
-
-
-function updatePaymentDisplay(){
-
-  const selected =
-    document.querySelector(
-      'input[name="paymentMethod"]:checked'
-    ).value;
-
-
-  if(selected === "bank"){
-
-    bankPaymentInfo
-      .classList.remove("hidden");
-
-    onlinePaymentInfo
-      .classList.add("hidden");
-
-  }else{
-
-    bankPaymentInfo
-      .classList.add("hidden");
-
-    onlinePaymentInfo
-      .classList.remove("hidden");
-
-  }
-
-}
-
-
-/* =========================================
-   STRIPE PAYMENT LINK
-   ========================================= */
-
-stripePayButton.addEventListener(
-  "click",
-  function(event){
-
-    if(!STRIPE_PAYMENT_LINK){
-
-      event.preventDefault();
-
-      alert(
-        "ยังไม่ได้ตั้งค่า Payment Link สำหรับการชำระออนไลน์\n\n" +
-        "กรุณาใส่ Stripe Payment Link จริงของร้านในตัวแปร STRIPE_PAYMENT_LINK ก่อนใช้งาน"
-      );
-
-      return;
-    }
-
-
-    this.href =
-      STRIPE_PAYMENT_LINK;
-
-  }
-);
-
-
-/* =========================================
-   VALIDATE ORDER
-   ========================================= */
-
-function validateOrder(){
-
-  if(cart.length === 0){
-
-    alert(
-      "กรุณาเลือกสินค้าก่อนสั่งซื้อ\n" +
-      "Please add a product to your cart."
-    );
-
-    return false;
-
-  }
-
-
-  const name =
-    document
-      .getElementById("customerName")
-      .value.trim();
-
-  const email =
-    document
-      .getElementById("customerEmail")
-      .value.trim();
-
-  const phone =
-    document
-      .getElementById("customerPhone")
-      .value.trim();
-
-  const address =
-    document
-      .getElementById("customerAddress")
-      .value.trim();
-
-
-  if(!name){
-
-    alert(
-      "กรุณากรอกชื่อ / Please enter your name."
-    );
-
-    return false;
-
-  }
-
-
-  if(!email){
-
-    alert(
-      "กรุณากรอกอีเมล / Please enter your email."
-    );
-
-    return false;
-
-  }
-
-
-  if(!phone){
-
-    alert(
-      "กรุณากรอกเบอร์โทรศัพท์ / Please enter your phone."
-    );
-
-    return false;
-
-  }
-
-
-  if(!address){
-
-    alert(
-      "กรุณากรอกที่อยู่จัดส่ง / Please enter your shipping address."
-    );
-
-    return false;
-
-  }
-
-
-  return true;
-
-}
-
-
-/* =========================================
-   BUILD ORDER MESSAGE
-   ========================================= */
-
-function buildOrderMessage(){
-
-  if(!validateOrder()){
-
-    return null;
-
-  }
-
-
-  const name =
-    document
-      .getElementById("customerName")
-      .value.trim();
-
-  const email =
-    document
-      .getElementById("customerEmail")
-      .value.trim();
-
-  const phone =
-    document
-      .getElementById("customerPhone")
-      .value.trim();
-
-  const country =
-    countryEl.value;
-
-  const address =
-    document
-      .getElementById("customerAddress")
-      .value.trim();
-
-
-  const payment =
-    document.querySelector(
-      'input[name="paymentMethod"]:checked'
-    ).value;
-
-
-  let subtotal = 0;
-
-
-  let productsText = "";
-
-
-  cart.forEach(item => {
-
-    const itemTotal =
-      item.price * item.qty;
-
-    subtotal += itemTotal;
-
-
-    productsText +=
-      `- ${item.name} | ` +
-      `${item.range} | ` +
-      `Qty: ${item.qty} | ` +
-      `Starting price: ${itemTotal.toLocaleString()} THB\n`;
-
-  });
-
-
-  let shippingText = "";
-
-  let totalText = "";
-
-
-  if(country === "Thailand"){
-
-    shippingText =
-      "100 THB";
-
-    totalText =
-      (subtotal + 100)
-        .toLocaleString() +
-      " THB";
-
-  }else{
-
-    shippingText =
-      "TBC / ต้องยืนยัน";
-
-    totalText =
-      subtotal.toLocaleString() +
-      " THB + international shipping";
-
-  }
-
-
-  const paymentText =
-    payment === "bank"
-      ? "Bank Transfer / โอนเงินธนาคาร"
-      : "Online Payment / ชำระออนไลน์";
-
-
-  const message =
-
-`KNIFEMAKERSHOP - ORDER
-
-CUSTOMER / ผู้สั่งซื้อ
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-Country: ${country}
-Address: ${address}
-
-PRODUCTS / สินค้า
-${productsText}
-
-SUBTOTAL / ค่าสินค้า
-${subtotal.toLocaleString()} THB
-
-SHIPPING / ค่าจัดส่ง
-${shippingText}
-
-TOTAL / ยอดรวม
-${totalText}
-
-PAYMENT / การชำระเงิน
-${paymentText}
-
-NOTE / หมายเหตุ
-The displayed product range is the stated price range.
-Final price should be confirmed before payment.
-`;
-
-  return {
-    name:name,
-    email:email,
-    phone:phone,
-    country:country,
-    address:address,
-    payment:payment,
-    subtotal:subtotal,
-    shippingText:shippingText,
-    totalText:totalText,
-    message:message
-  };
-
-}
-
-
-/* =========================================
-   CONFIRM ORDER
-   ========================================= */
-
-confirmOrderBtn.addEventListener(
-  "click",
-  () => {
-
-    const order =
-      buildOrderMessage();
-
-
-    if(!order){
-
-      return;
-
-    }
-
-
-    successBox.style.display = "block";
-
-
-    successBox.innerHTML = `
-
-      <h3>
-        สร้างคำสั่งซื้อแล้ว / ORDER CREATED
-      </h3>
-
-      <p>
-        ขอบคุณคุณ
-        <strong>
-          ${escapeHTML(order.name)}
-        </strong>
-      </p>
-
-      <p>
-        ยอดรวม:
-        <strong>
-          ${escapeHTML(order.totalText)}
-        </strong>
-      </p>
-
-      <p>
-        ระบบได้เตรียมรายละเอียดคำสั่งซื้อไว้แล้ว
-        กรุณาส่งคำสั่งซื้อทางอีเมล
-        หรือดำเนินการชำระเงินตามวิธีที่เลือก
-      </p>
-
-      <p>
-        Your order details are ready.
-        Please email the order or continue with your selected payment method.
-      </p>
-
-    `;
-
-
-    successBox.scrollIntoView({
-      behavior:"smooth",
-      block:"center"
-    });
-
-  }
-);
-
-
-/* =========================================
-   EMAIL ORDER
-   ========================================= */
-
-emailOrderBtn.addEventListener(
-  "click",
-  () => {
-
-    const order =
-      buildOrderMessage();
-
-
-    if(!order){
-
-      return;
-
-    }
-
-
-    const subject =
-      encodeURIComponent(
-        "KnifeMakerShop Order - " +
-        order.name
-      );
-
-
-    const body =
-      encodeURIComponent(
-        order.message
-      );
-
-
-    window.location.href =
-      "mailto:knifemakershop@hotmail.com" +
-      "?subject=" +
-      subject +
-      "&body=" +
-      body;
-
-  }
-);
-
-
-/* =========================================
-   IMAGE ZOOM
-   ========================================= */
-
-const imageModal =
-  document.getElementById("imageModal");
-
-const modalImage =
-  document.getElementById("modalImage");
-
-const closeModal =
-  document.getElementById("closeModal");
-
-
-document
-  .querySelectorAll(".zoomable")
-  .forEach(image => {
-
-    image.addEventListener(
-      "click",
-      () => {
-
-        modalImage.src =
-          image.src;
-
-        modalImage.alt =
-          image.alt;
-
-        imageModal.classList.add("show");
-
-      }
-    );
-
-  });
-
-
-closeModal.addEventListener(
-  "click",
-  closeImageModal
-);
-
-
-imageModal.addEventListener(
-  "click",
-  event => {
-
-    if(event.target === imageModal){
-
-      closeImageModal();
-
-    }
-
-  }
-);
-
-
-document.addEventListener(
-  "keydown",
-  event => {
-
-    if(
-      event.key === "Escape" &&
-      imageModal.classList.contains("show")
-    ){
-
-      closeImageModal();
-
-    }
-
-  }
-);
-
-
-function closeImageModal(){
-
-  imageModal.classList.remove("show");
-
-  modalImage.src = "";
-
-}
-
-
-/* =========================================
-   ESCAPE HTML
-   ========================================= */
-
-function escapeHTML(value){
-
-  return String(value)
-    .replaceAll("&","&amp;")
-    .replaceAll("<","&lt;")
-    .replaceAll(">","&gt;")
-    .replaceAll('"',"&quot;")
-    .replaceAll("'","&#039;");
-
-}
-
-
-/* =========================================
-   YEAR
-   ========================================= */
-
-document.getElementById("year")
-  .textContent =
-  new Date().getFullYear();
-
-
-/* =========================================
-   INITIALIZE
-   ========================================= */
-
-updateCart();
-
-updatePaymentDisplay();
-
+document.querySelectorAll('.size-btn').forEach(b=>b.onclick=()=>{document.querySelectorAll('.products').forEach(p=>{p.classList.remove('small','medium','large');p.classList.add(b.dataset.size)});document.querySelectorAll('.size-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active')});
+document.querySelectorAll('.order').forEach(b=>b.onclick=()=>{document.getElementById('item').value=b.dataset.item});
 </script>
-
-</body>
-</html>
-
-    
+</body></html>
